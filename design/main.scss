@@ -1,0 +1,32 @@
+@import "../vendor/reset.css";
+@import "../vendor/typeset.css";
+
+main {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+article h1 {
+  font-weight: 900;
+}
+
+::selection {
+  background: pink;
+}
+
+.site-header {
+  text-align: center;
+
+  h1, ul, li {
+    display: inline-block;
+  }
+
+  h1 {
+    font-weight: bold;
+    padding: 0 1rem;
+  }
+
+  li {
+    padding: 0 1rem;
+  }
+}
