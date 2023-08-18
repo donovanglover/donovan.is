@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Donovan Glover",
   "dependencies": {
+    "bootstrap": "^5.3.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
