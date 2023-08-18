@@ -7496,11 +7496,6 @@ mkdirp@^0.5.1, mkdirp@^0.5.4:
   dependencies:
     minimist "^1.2.6"
 
-modern-normalize@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-2.0.0.tgz#3d04ed01c81a3d4e0a0fd9ceba6abd1b16f5964b"
-  integrity sha512-CxBoEVKh5U4DH3XuNbc5ONLF6dQBc8dSc7pdZ1957FGbIO5JBqGqqchhET9dTexri8/pk9xBL6+5ceOtCIp1QA==
-
 moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
