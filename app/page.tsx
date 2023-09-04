@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <section className={`${utilStyles.headingMd} text-gray-600`}>
+      <section className={`${utilStyles.headingMd}`}>
         <p>
           Hello, I&apos;m <b>Emanuele</b>. I&apos;m a software engineer in love
           with front end development. You can contact me on{' '}
@@ -34,7 +34,6 @@ export default function Home() {
             </a>{' '}
           </i>
         </p>
-        <p>(This is a Next.js sample website)</p>
         <h3>Posts</h3>
       </section>
 
@@ -43,11 +42,8 @@ export default function Home() {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <div className='font-medium mb-1 mt-5'>
                 <Link href={`/posts/${id}`}>{title}</Link>
-              </div>
-              {/* <br /> */}
-              <small className='text-gray-500 font-medium'>
+              <small>
                 <Date dateString={date} />
               </small>
             </li>
