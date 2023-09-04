@@ -1,13 +1,10 @@
 import '@/styles/main.scss'
 import Image from 'next/image'
-import styles from './layout.module.scss'
 import utilStyles from './utils.module.scss'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-
-const name = 'Emanuele Favero'
 
 export const metadata = {
   title: 'Blog',
@@ -20,32 +17,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='en-us'>
       <body className={inter.className}>
-        <div className={styles.container}>
-          <header className={styles.header}>
+        <div className='container'>
+          <header className='header'>
             <Link href='/'>
-              <Image
-                priority
-                src='/images/profile.jpg'
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=''
-              />
+              <Image priority src='/images/profile.jpg' className={utilStyles.borderCircle} height={108} width={108} alt='' />
             </Link>
-            <h1 className={utilStyles.headingLg}>
-              <Link href='/' className={utilStyles.colorInherit}>
-                {name}
-              </Link>
+            <h1>
+              <Link href='/'>Donovan Glover</Link>
             </h1>
           </header>
 
           <main>{children}</main>
-
-          <div className={styles.backToHome}>
-            <Link href='/'>← Back to home</Link>
-          </div>
+          <Link href='/'>← Back to home</Link>
         </div>
       </body>
     </html>
