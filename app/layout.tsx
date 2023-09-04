@@ -1,6 +1,5 @@
 import '@/styles/main.scss'
 import Image from 'next/image'
-import utilStyles from './utils.module.scss'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
@@ -22,7 +21,7 @@ export default function RootLayout({
         <div className='container'>
           <header className='header'>
             <Link href='/'>
-              <Image priority src='/images/profile.jpg' className={utilStyles.borderCircle} height={108} width={108} alt='' />
+              <Image priority src='/images/profile.jpg' height={108} width={108} alt='' />
             </Link>
             <h1>
               <Link href='/'>Donovan Glover</Link>

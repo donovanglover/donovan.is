@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Date from '@/components/Date'
-import utilStyles from './utils.module.scss'
 
 import { getSortedPostsData } from '@/lib/posts'
 
@@ -19,32 +18,13 @@ export default function Home() {
 
   return (
     <>
-      <section className={`${utilStyles.headingMd}`}>
-        <p>
-          Hello, I&apos;m <b>Emanuele</b>. I&apos;m a software engineer in love
-          with front end development. You can contact me on{' '}
-          <a href='https://www.linkedin.com/in/emanuele-favero/'>Linkedin</a>.
-        </p>
-        <p>
-          <i>
-            Check out my projects on{' '}
-            <a target='_blank' href='https://github.com/emanuelefavero'>
-              GitHub
-            </a>{' '}
-          </i>
-        </p>
-        <h3>Posts</h3>
-      </section>
-
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section>
+        <h2>Blog</h2>
+        <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li>
                 <Link href={`/posts/${id}`}>{title}</Link>
-              <small>
-                <Date dateString={date} />
-              </small>
+              <small><Date dateString={date} /></small>
             </li>
           ))}
         </ul>
