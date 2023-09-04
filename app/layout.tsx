@@ -8,7 +8,6 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 const name = 'Emanuele Favero'
-export const siteTitle = 'Next.js Sample Website'
 
 export const metadata = {
   title: 'Blog',
