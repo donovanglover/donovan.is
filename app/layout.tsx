@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/main.scss'
 import Image from 'next/image'
 import styles from './layout.module.scss'
 import utilStyles from './utils.module.scss'
