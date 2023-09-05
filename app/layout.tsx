@@ -1,4 +1,4 @@
-import '@/styles/main.scss'
+import '@/styles/main.sass'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
@@ -10,11 +10,7 @@ export const metadata = {
   description: 'Next.js 13 App Router Blog',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en-us'>
       <body className={inter.className}>
