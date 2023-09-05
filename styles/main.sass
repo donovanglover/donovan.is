@@ -22,11 +22,43 @@ html
   background: var(--base00)
   color: var(--base05)
 
+::selection
+  background: var(--base03)
+
 a
   color: var(--base09)
 
 main
   margin: 0 auto
-  max-width: 800px
+  max-width: 864px
   font-size: 1.2rem
   line-height: 2.4rem
+  padding: 2rem
+
+.top
+  height: 0.1rem
+  background: linear-gradient(to right, var(--base08), var(--base09), var(--base0A), var(--base0B), var(--base0C), var(--base0D), var(--base0E), var(--base0F))
+
+header
+  padding-top: 2rem
+  text-align: center
+  a
+    text-decoration: none
+    color: var(--base05)
+  img
+    border-radius: 50%
+    border: 0.1rem solid var(--base02)
+    filter: saturate(125%) drop-shadow(0.1rem 0.1rem 0.25rem var(--base01))
+  h1
+    margin-top: 0.5rem
+
+nav
+  a
+    font-size: 1.4rem
+    padding: 0.5rem
+    width: 9rem
+    display: inline-block
+    &:hover
+      text-decoration: underline
+    &:focus
+      color: var(--base0A)
