@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next-remote-watch posts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -22,5 +22,8 @@
     "remark-html": "^15.0.2",
     "sass": "^1.62.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "next-remote-watch": "^2.0.0"
   }
 }
