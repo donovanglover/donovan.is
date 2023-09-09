@@ -1,16 +1,34 @@
-# The URL the site will be built for
 base_url = "https://donovanglover.com"
-
-# Whether to automatically compile all Sass files in the sass directory
+title = "Donovan Glover"
+author = "Donovan Glover"
+description = "Personal website of Donovan Glover, a Software Engineer based in Atlanta, GA. Specializes in Linux, Rust, and full-stack web development."
+default_language = "en"
+theme = "tabi"
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
+minify_html = true
+generate_feed = true
 build_search_index = true
+taxonomies = [
+  { name = "tags", feed = true }
+]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "css"
+external_links_target_blank = true
+external_links_no_referrer = true
+smart_punctuation = true
 
 [extra]
-# Put all your custom variables here
+skin = "vibrance"
+quick_navigation_buttons = true
+long_date_format = "%B %-d %Y"
+short_date_format = "%b %-d %Y"
+email = "aGlAZG9ub3Zhbi5pcw=="
+copyright = "© $CURRENT_YEAR Donovan Glover $SEPARATOR Unless otherwise noted, the writing on this website is available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license."
+invert_title_order = true
+browser_theme_color = ["#d12e36", "#406699"]
+socials = [
+    { name = "github", url = "https://github.com/donovanglover", icon = "github" },
+    { name = "linkedin", url = "https://linkedin.com/in/donovanglover", icon = "linkedin" },
+]
