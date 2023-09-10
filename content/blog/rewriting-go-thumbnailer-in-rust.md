@@ -163,7 +163,7 @@ As a learning exercise, I decided to write some more advanced CLI logic in Go. [
 
 I tried following the instructions on the stylish [cobra.dev](https://cobra.dev/) website in order to get up to speed with Cobra. Unfortunately, those instructions have been outdated for [almost two years](https://github.com/spf13/cobra/issues/1674) now.
 
-![](/images/cobra.dev.png")
+{{ full_width_image(src="/images/cobra.dev.png") }}
 
 ```bash
 ~/go-thumbnailer via go v1.20.7 >>> go get -u github.com/spf13/cobra/cobra
