@@ -2,7 +2,7 @@
 title: "nix-config"
 description: "A fully reproducible and declarative Linux environment with NixOS."
 weight: 1
-aliases: ["nix-config", "using-nixos"]
+aliases: ["nix-config", "nix", "using-nixos"]
 
 taxonomies: {
   tags: ["Linux", "Nix", "NixOS"]
