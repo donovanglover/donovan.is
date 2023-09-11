@@ -182,7 +182,7 @@ Although there was a [pull request](https://github.com/spf13/cobra-cli/pull/68) 
 
 ## Rewriting it in Rust
 
-Rewriting software is [not something you should usually do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), especially for larger software. Luckily, the architecture of go-thumbnailer made it simple enough that the migration was fairly straight-forward.
+Rewriting software is [not something you should generally do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), especially for larger software. Luckily, the architecture of go-thumbnailer made it simple enough that the migration was fairly straight-forward.
 
 The main blocker was finding an image processing library that would be able to create thumbnails similar to govips. In particular, I assumed that it would be non-trivial to implement `InterestingCentre` in other libraries.
 
@@ -303,7 +303,7 @@ fn main() {
 }
 ```
 
-No more need to pollute the code base with thousands of lines of unsafe Rust code! Additionally, libvips was no longer a requirement, making it easier for users to build the project downstream.
+No more needing to pollute the code base with thousands of lines of unsafe Rust code! Additionally, libvips was no longer a requirement, making it easier for users to build the project downstream.
 
 ### Bringing in the clap
 
@@ -329,7 +329,7 @@ fn main() {
 
 ### Adding JPEG support
 
-Alright, this is cool, but the old Go version supported `cover.jpg` as well. While we're at it, let's turn `input_directory` into a `PathBuf` instead of a `String` to help us guarantee that a path exists.
+Alright this is cool, but the old Go version supported `cover.jpg` as well. While we're at it, let's turn `input_directory` into a `PathBuf` instead of a `String` to help us guarantee that a path exists.
 
 ```rust
 use clap::Parser;
