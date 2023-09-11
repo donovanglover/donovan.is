@@ -2,7 +2,6 @@
 title: Rewriting go-thumbnailer in Rust
 description: The story of how one library carried my migration from Go to Rust and the challenges I faced along the way.
 date: 2023-09-10
-path: "rewriting-go-thumbnailer-in-rust"
 
 taxonomies: {
   tags: ["Go", "Rust", "Linux", "Systems Programming"]
