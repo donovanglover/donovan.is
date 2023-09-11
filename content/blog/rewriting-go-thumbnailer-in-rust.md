@@ -198,7 +198,7 @@ As it turns out, there's a reason why Rust bindings aren't mentioned in the [lib
 
 [libvips-rust-bindings](https://docs.rs/libvips/1.5.1/libvips/index.html) was one of the many [undocumented crates](https://crates.io/search?q=libvips) I went through trying to get something working. This was the library that ultimately worked for me, however it came at a cost.
 
-After digging through the 23,036-line [`ops.rs`](https://github.com/olxgroup-oss/libvips-rust-bindings/blob/b43be23b8d4643a97f898bdb4c2e618ecd5eedae/src/ops.rs) with my handy tool [ripgrep](https://github.com/BurntSushi/ripgrep), I found the function that I needed to call in order to have feature parity with libvips. Progress!
+After digging through the 23,036-line [`ops.rs`](https://github.com/olxgroup-oss/libvips-rust-bindings/blob/b43be23b8d4643a97f898bdb4c2e618ecd5eedae/src/ops.rs) with my handy tool [ripgrep](https://github.com/BurntSushi/ripgrep), I found the function that I needed to call in order to have feature parity with govips. Progress!
 
 ```rust
 use libvips::{ops, VipsImage, VipsApp};
