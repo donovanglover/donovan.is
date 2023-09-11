@@ -220,7 +220,7 @@ fn main() {
 }
 ```
 
-There was only one problem: the code panicked.
+There was only one problem: the code panicked at runtime.
 
 ### Panics, Panics Everywhere
 
