@@ -8,7 +8,8 @@ taxonomies: {
 }
 
 extra: {
-  local_image: "/images/thud.png"
+  local_image: "/images/thud.png",
+  social_media_card: "/images/thud.png"
 }
 ---
 
