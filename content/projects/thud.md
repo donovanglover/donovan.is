@@ -2,6 +2,7 @@
 title: "thud"
 description: "Generate directory thumbnails for GTK-based file browsers from images inside them."
 weight: 1
+aliases: ["thud"]
 
 taxonomies: {
   tags: ["Rust", "Linux"]
