@@ -182,7 +182,7 @@ Although there was a [pull request](https://github.com/spf13/cobra-cli/pull/68) 
 
 ## Rewriting it in Rust
 
-Rewriting software is [not something you should generally do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), especially for larger software. Luckily, the architecture of go-thumbnailer made it simple enough that the migration was fairly straight-forward.
+Rewriting software is [not something you should generally do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), especially for larger software. Luckily the architecture of go-thumbnailer made it simple enough that the migration was fairly straight-forward.
 
 The main blocker was finding an image processing library that would be able to create thumbnails similar to govips. In particular, I assumed that it would be non-trivial to implement `InterestingCentre` in other libraries.
 
