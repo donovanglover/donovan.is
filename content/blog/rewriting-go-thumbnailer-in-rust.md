@@ -387,7 +387,7 @@ A *config* file has *rules*, and each rule consists of a *path* and a *strategy*
 
 ### Defining Strategies
 
-Now for the meat of things: users can customize how they want the thumbnailer to parse a specified paths with *strategies*.
+Now for the meat of things: users can customize how they want the thumbnailer to parse a specified path with *strategies*.
 
 This enables endless possibilities when it comes to *how* the thumbnails are created. For example, one can create a strategy that combines multiple images inside a directory when generating a thumbnail. For my use case, I created the *cover* strategy.
 
