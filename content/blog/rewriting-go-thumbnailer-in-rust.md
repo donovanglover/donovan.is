@@ -329,7 +329,7 @@ fn main() {
 
 ### Adding JPEG support
 
-Alright this is cool, but the old Go version supported `cover.jpg` as well. While we're at it, let's turn `input_directory` into a `PathBuf` instead of a `String` to help us guarantee that a path exists.
+Alright this is cool, but the old Go version supported `cover.jpg` as well. While we're at it, let's turn `input_directory` into a [`PathBuf`](https://doc.rust-lang.org/std/path/struct.PathBuf.html) instead of a `String` to help us guarantee that a path exists.
 
 ```rust
 use clap::Parser;
