@@ -1,3 +1,7 @@
 [submodule "themes/tabi"]
 	path = themes/tabi
 	url = https://github.com/welpo/tabi.git
+[submodule "themes/tabi-turbo"]
+	path = themes/tabi-turbo
+	url = https://github.com/donovanglover/tabi.git
+	branch = turbo
