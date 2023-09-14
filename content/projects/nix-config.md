@@ -68,7 +68,7 @@ In other words, if you remove a declarative option configured in Nix, that aspec
 
 ## Getting Started
 
-If you haven't already, [download NixOS](https://nixos.org/download#download-nixos). You can use my system configuration in a [virtual machine](https://wiki.gentoo.org/wiki/Virtualization) by running the following command in an existing NixOS install.
+If you haven't already, [download NixOS](https://nixos.org/download#download-nixos). You can use my system configuration in a [virtual machine](https://wiki.gentoo.org/wiki/Virtualization) by running the following command in an existing NixOS install:
 
 {% wide_container() %}
 
