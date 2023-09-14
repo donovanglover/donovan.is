@@ -28,6 +28,12 @@ email = "aGlAZG9ub3Zhbi5pcz9zdWJqZWN0PUhlbGxvISZib2R5PUhpIERvbm92YW4hIFNvIEkgd2F
 copyright = "© $CURRENT_YEAR Donovan Glover $SEPARATOR Unless otherwise noted, the writing on this website is available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license."
 invert_title_order = true
 browser_theme_color = "#5b5b65"
+menu = [
+    { name = "blog", url = "blog/" },
+    { name = "archive", url = "archive/" },
+    { name = "tags", url = "tags/" },
+    { name = "projects", url = "projects/" },
+]
 socials = [
     { name = "github", url = "https://github.com/donovanglover", icon = "github" },
     { name = "linkedin", url = "https://linkedin.com/in/donovanglover", icon = "linkedin" },
