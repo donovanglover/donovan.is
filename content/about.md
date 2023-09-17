@@ -7,7 +7,7 @@ template: "info-page.html"
 
 Hi, I'm Donovan.
 
-I'm able to learn things in short amounts of time.
+I'm able to learn new things in short amounts of time.
 
 I used to be a competitive programmer and won a few programming competitions.
 
