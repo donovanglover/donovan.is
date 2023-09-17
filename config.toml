@@ -29,7 +29,6 @@ copyright = "© $CURRENT_YEAR Donovan Glover $SEPARATOR Unless otherwise noted, 
 invert_title_order = true
 browser_theme_color = "#5b5b65"
 menu = [
-    { name = "blog", url = "blog/" },
     { name = "archive", url = "archive/" },
     { name = "tags", url = "tags/" },
     { name = "projects", url = "projects/" },
