@@ -15,7 +15,7 @@ Below covers some of my interests.
 
 I am interested in writing software that operating systems and other software use. Examples include libraries, command-line tools, and microservices.
 
-## Creative Development
+## Application Development
 
 I am interested in writing software that enables people to produce creative output. Examples include editors, engines, and artificial intelligence.
 
