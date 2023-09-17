@@ -31,6 +31,7 @@ browser_theme_color = "#5b5b65"
 menu = [
     { name = "archive", url = "archive/" },
     { name = "projects", url = "projects/" },
+    { name = "about", url = "about/" },
 ]
 socials = [
     { name = "github", url = "https://github.com/donovanglover", icon = "github" },
