@@ -1,6 +1,6 @@
 ---
 title: "Recent posts"
-sort_by: "date"
+sort_by: "weight"
 template: "section.html"
 insert_anchor_links: "left"
 

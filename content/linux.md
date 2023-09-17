@@ -1,7 +1,7 @@
 ---
 title: Linux Development
 description: "Learn more about how I can help your company with Linux."
-date: 2023-09-16
+weight: 1
 template: "info-page.html"
 ---
 

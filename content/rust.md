@@ -1,7 +1,7 @@
 ---
 title: Rust Development
 description: "Learn how I can make your company leverage fearless concurrency with Rust."
-date: 2023-09-16
+weight: 1
 template: "info-page.html"
 ---
 

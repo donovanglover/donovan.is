@@ -1,7 +1,7 @@
 ---
 title: Full Stack Web Development
 description: "Learn how I can help your company create and maintain websites and web applications."
-date: 2023-09-16
+weight: 1
 template: "info-page.html"
 aliases: ["web-development", "full-stack"]
 ---

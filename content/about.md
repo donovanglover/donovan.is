@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "Learn more about me."
-date: 2023-09-16
+weight: 1
 template: "info-page.html"
 ---
 
