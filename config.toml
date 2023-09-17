@@ -30,7 +30,6 @@ invert_title_order = true
 browser_theme_color = "#5b5b65"
 menu = [
     { name = "archive", url = "archive/" },
-    { name = "tags", url = "tags/" },
     { name = "projects", url = "projects/" },
 ]
 socials = [
