@@ -14,6 +14,6 @@ extra: {
 }
 ---
 
-I'm a **software engineer** in **Atlanta, GA** that specializes in [Linux](/tags/linux/), [Rust](/tags/rust/), and [full-stack web development](/tags/web-development/). I build fast, well-designed **applications** that abstract complexity and provide **value** to users.
+I'm a **software engineer** in **Atlanta, GA** that specializes in [**Linux**](/linux/), [**Rust**](/rust/), and [**full stack web development**](/web/). I build fast, well-designed **applications** that abstract complexity and provide **value** to users.
 
 [GitHub](https://github.com/donovanglover) | [LinkedIn](https://linkedin.com/in/donovanglover) | <a href="#" data-encoded-email="aGlAZG9ub3Zhbi5pcz9zdWJqZWN0PUhlbGxvISZib2R5PUhpIERvbm92YW4hIFNvIEkgd2FzIGNoZWNraW5nIG91dCB5b3VyIGJsb2cgYW5kLi4u">Email</a>
