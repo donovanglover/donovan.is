@@ -44,4 +44,4 @@ I have experience with maintaining projects over many years and understand the i
 
 ## Contact
 
-If you're interested in hiring me, contact me with the icons below.
+Need an experienced web developer for your next project? Contact me with the icons below.
