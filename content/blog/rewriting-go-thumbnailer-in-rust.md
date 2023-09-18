@@ -224,7 +224,7 @@ There was only one problem: the code panicked at runtime.
 
 ### Panics, Panics Everywhere
 
-With the core library itself panicking, I had to dig deep into the [unsafe](https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html) Rust bindings in order to find out what the issue was.
+With the vips library itself panicking, I had to dig deep into the [unsafe](https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html) Rust bindings in order to find out what the issue was.
 
 After some testing, it turned out that libvips only panicked when given custom `ThumbnailImageOptions`, which was necessary for the `Interesting::Centre` functionality we wanted earlier.
 
