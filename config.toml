@@ -20,7 +20,7 @@ external_links_no_referrer = true
 smart_punctuation = true
 
 [extra]
-base_canonical_url = "https://donovanglover.com"
+base_canonical_url = "https://donovan.is"
 skin = "vibrance"
 quick_navigation_buttons = true
 long_date_format = "%B %-d %Y"
