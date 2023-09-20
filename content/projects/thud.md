@@ -10,7 +10,7 @@ taxonomies: {
 
 extra: {
   local_image: "/images/thud.webp",
-  social_media_card: "/images/thud.png"
+  social_media_card: "/images/thud.jpg"
 }
 ---
 
@@ -18,7 +18,7 @@ extra: {
 
 The source code is available on [GitHub](https://github.com/donovanglover/thud).
 
-{{ full_width_image(src="/images/thud.png" alt="A screenshot of Nautilus with directory thumbnails.") }}
+{{ full_width_image(src="/images/thud.jpg" alt="A screenshot of Nautilus with directory thumbnails.") }}
 
 ## Background
 
