@@ -18,7 +18,7 @@ extra: {
 
 The source code is available on [GitHub](https://github.com/donovanglover/thud).
 
-![thud](/images/thud.png)
+{{ full_width_image(src="/images/thud.png" alt="A screenshot of Nautilus with directory thumbnails.") }}
 
 ## Background
 
