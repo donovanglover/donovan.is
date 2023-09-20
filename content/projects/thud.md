@@ -9,7 +9,7 @@ taxonomies: {
 }
 
 extra: {
-  local_image: "/images/thud.png",
+  local_image: "/images/thud.webp",
   social_media_card: "/images/thud.png"
 }
 ---

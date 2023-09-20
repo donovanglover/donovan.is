@@ -9,7 +9,7 @@ taxonomies: {
 }
 
 extra: {
-  local_image: "/images/nix-config-with-pepper.jpg",
+  local_image: "/images/nix-config-with-pepper.webp",
   social_media_card: "/images/nix-config-with-pepper.jpg"
 }
 ---
