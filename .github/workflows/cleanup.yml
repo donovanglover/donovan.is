@@ -1,3 +1,9 @@
+name: clean
+
+on:
+  push:
+  pull_request:
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
