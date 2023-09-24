@@ -4,8 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "bun build --minify scripts/main.ts --outfile=static/bundle.min.js",
     "dev": "bun build --watch scripts/main.ts --outfile=static/bundle.min.js",
-    "build": "bun build --minify scripts/main.ts --outfile=static/bundle.min.js"
+    "format": "biome check --apply scripts"
   },
   "dependencies": {
     "@hotwired/turbo": "^7.3.0"
