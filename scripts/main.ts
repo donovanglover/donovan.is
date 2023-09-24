@@ -1,5 +1,6 @@
 import "@hotwired/turbo"
+import decodeMail from "./decodeMail"
 
 document.addEventListener("turbo:load", function() {
-  console.log("Hello world!")
+  decodeMail()
 });
