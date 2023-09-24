@@ -1,3 +1,7 @@
+// MIT License
+// Copyright (C) 2023 Donovan Glover
+// Copyright (C) 2023 Óscar Fernández
+
 // Retrieve theme from either the localStorage or the data-theme attribute on the document element.
 let currentTheme = localStorage.getItem("theme") || document.documentElement.getAttribute("data-theme")
 

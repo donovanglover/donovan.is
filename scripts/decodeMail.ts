@@ -1,3 +1,7 @@
+// MIT License
+// Copyright (C) 2023 Donovan Glover
+// Copyright (C) 2023 Óscar Fernández
+
 function decodeBase64(encodedString: string) {
   try {
     const byteString = atob(encodedString)

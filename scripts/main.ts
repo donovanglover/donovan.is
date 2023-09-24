@@ -1,3 +1,6 @@
+// MIT License
+// Copyright (C) 2023 Donovan Glover
+
 import "@hotwired/turbo"
 import copyToClipboard from "./copyToClipboard"
 import decodeMail from "./decodeMail"

@@ -1,3 +1,7 @@
+// MIT License
+// Copyright (C) 2023 Donovan Glover
+// Copyright (C) 2023 Óscar Fernández
+
 const changeIcon = (copyDiv: HTMLDivElement, className: string) => {
   copyDiv.classList.add(className)
   setTimeout(() => copyDiv.classList.remove(className), 2500)
