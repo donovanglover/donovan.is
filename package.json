@@ -3,6 +3,10 @@
   "module": "scripts/main.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun build --watch scripts/main.ts --outfile=static/bundle.min.js",
+    "build": "bun build --minify scripts/main.ts --outfile=static/bundle.min.js"
+  },
   "dependencies": {
     "@hotwired/turbo": "^7.3.0"
   },
