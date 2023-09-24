@@ -3,6 +3,9 @@
   "module": "scripts/main.ts",
   "type": "module",
   "private": true,
+  "dependencies": {
+    "@hotwired/turbo": "^7.3.0"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
