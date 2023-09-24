@@ -1,6 +1,6 @@
 import "@hotwired/turbo"
-import decodeMail from "./decodeMail"
 import copyToClipboard from "./copyToClipboard"
+import decodeMail from "./decodeMail"
 
 document.addEventListener("turbo:load", () => {
   decodeMail()
