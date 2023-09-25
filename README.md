@@ -15,3 +15,22 @@ It is deployed to [Cloudflare Pages](https://www.cloudflare.com/developer-platfo
 - Web extension development. Firefox etc.
 - Systems programming. Rust etc.
 - Server administration. Linux etc.
+
+## Dependencies
+
+- [zola](https://www.getzola.org/)
+- [bun](https://bun.sh/)
+- [Biome](https://biomejs.dev/) (dev only)
+
+If you have [Nix](https://nixos.org/) installed, you can run `nix develop --command fish` to automatically get a development environment set up.
+
+## Development
+
+- Start the web server: `zola serve`
+- Watch for changes to build the JavaScript bundle: `bun run dev`
+- Format TypeScript code: `bun run format`
+
+## Production
+
+1. Build the production JavaScript bundle: `bun run build`
+2. Build the website: `zola build`
