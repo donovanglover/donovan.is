@@ -18,8 +18,8 @@ It is deployed to [Cloudflare Pages](https://www.cloudflare.com/developer-platfo
 
 ## Dependencies
 
-- [zola](https://www.getzola.org/)
-- [bun](https://bun.sh/)
+- [Zola](https://www.getzola.org/)
+- [Bun](https://bun.sh/)
 - [Biome](https://biomejs.dev/) (dev only)
 
 If you have [Nix](https://nixos.org/) installed, you can run `nix develop --command fish` to automatically get a development environment set up.
