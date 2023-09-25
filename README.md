@@ -37,6 +37,6 @@ If you have [Nix](https://nixos.org/) installed, you can run `nix develop --comm
 
 ## License
 
-The writing in `*.md` files, unless otherwise stated in the `.md` file itself, is available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+The writing in `*.md` files, unless otherwise stated in the `.md` file itself, are available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 Source code files (`*.ts`, `*.sass`, `*.nix`) are available under the [MIT License](https://choosealicense.com/licenses/mit/).
