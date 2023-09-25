@@ -16,6 +16,10 @@ It is deployed to [Cloudflare Pages](https://www.cloudflare.com/developer-platfo
 - Systems programming. Rust etc.
 - Server administration. Linux etc.
 
+## Subscribe
+
+<https://donovan.is/atom.xml>
+
 ## Dependencies
 
 - [Zola](https://www.getzola.org/)
