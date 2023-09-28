@@ -6,8 +6,8 @@ function createLinkFromImage(image: HTMLImageElement): HTMLAnchorElement {
   link.target = "_blank"
   link.href = image.src
   link.setAttribute("data-pswp-src", `${image.src}`)
-  link.setAttribute("data-pswp-width", `${image.naturalWidth}`)
-  link.setAttribute("data-pswp-height", `${image.naturalHeight}`)
+  link.setAttribute("data-pswp-width", `${image.getAttribute("width")}`)
+  link.setAttribute("data-pswp-height", `${image.getAttribute("height")}`)
   link.classList.add("photoswipe", "no-hover-padding")
 
   return link
