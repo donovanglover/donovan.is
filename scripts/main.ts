@@ -26,6 +26,7 @@ import decodeMail from "./decodeMail"
 import footnoteBacklinks from "./footnoteBacklinks"
 import photoswipe from "./photoswipe"
 import tableOfContents from "./tableOfContents"
+import removeExistingHighlight from "./tableOfContents"
 import themeSwitcher from "./themeSwitcher"
 
 document.addEventListener("turbo:load", () => {
@@ -35,4 +36,8 @@ document.addEventListener("turbo:load", () => {
   photoswipe()
   tableOfContents()
   themeSwitcher()
+})
+
+document.addEventListener("turbo:before-render", () => {
+  removeExistingHighlight()
 })

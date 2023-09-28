@@ -1,4 +1,4 @@
-function removeExistingHighlight() {
+export function removeExistingHighlight() {
   const highlighted = document.getElementsByClassName("toc-highlight")
 
   for (const element of highlighted) {
