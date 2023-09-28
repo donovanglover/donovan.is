@@ -6,7 +6,8 @@ on:
 jobs:
   prune:
     name: Prune Deployments
-    uses: go-fjords/cloudflare-delete-deployments-action@main
+    steps:
+      uses: go-fjords/cloudflare-delete-deployments-action@main
     with:
       token: ${{ secrets.CLOUDFLARE_TOKEN }}
       project: ${{ secrets.PROJECT }}
