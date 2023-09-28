@@ -30,7 +30,7 @@ Below highlights some of my skills in this field.
 
 ## Technologies
 
-- I use [Gatsby](https://www.gatsbyjs.com/) and [GraphQL](https://graphql.org/) to create fast content-centric websites.
+- I use [Gatsby](https://www.gatsbyjs.com/), [GraphQL](https://graphql.org/), and [Decap CMS](https://decapcms.org/) to create fast content-centric websites.
 - I use [Zola](https://www.getzola.org/) and [Turbo](https://turbo.hotwired.dev/) to create simple websites that have the speed of SPAs.
 - I use [React](https://react.dev/), [Next.js](https://nextjs.org/) and [Prisma](https://www.prisma.io/) to create highly performant web applications.
 
