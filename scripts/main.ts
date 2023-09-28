@@ -24,11 +24,13 @@ import "@hotwired/turbo"
 import copyToClipboard from "./copyToClipboard"
 import decodeMail from "./decodeMail"
 import footnoteBacklinks from "./footnoteBacklinks"
+import photoswipe from "./photoswipe"
 import themeSwitcher from "./themeSwitcher"
 
 document.addEventListener("turbo:load", () => {
   copyToClipboard()
   decodeMail()
   footnoteBacklinks()
+  photoswipe()
   themeSwitcher()
 })
