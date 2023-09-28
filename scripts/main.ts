@@ -25,6 +25,7 @@ import copyToClipboard from "./copyToClipboard"
 import decodeMail from "./decodeMail"
 import footnoteBacklinks from "./footnoteBacklinks"
 import photoswipe from "./photoswipe"
+import tableOfContents from "./tableOfContents"
 import themeSwitcher from "./themeSwitcher"
 
 document.addEventListener("turbo:load", () => {
@@ -32,5 +33,6 @@ document.addEventListener("turbo:load", () => {
   decodeMail()
   footnoteBacklinks()
   photoswipe()
+  tableOfContents()
   themeSwitcher()
 })
