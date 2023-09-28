@@ -1,0 +1,14 @@
+name: Deploy
+
+jobs:
+  prune:
+    name: Prune Deployments
+    runs-on: ubuntu-latest
+    env:
+      ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+      PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+      TOKEN: ${{ secrets.TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+      - run: bun index.ts
