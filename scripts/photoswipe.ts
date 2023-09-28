@@ -25,11 +25,13 @@ export default function photoswipe() {
     wrapElement(image, createLinkFromImage(image))
   })
 
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "article",
-    children: ".photoswipe",
-    pswpModule: () => import("photoswipe"),
-  })
+  if (images) {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "article",
+      children: ".photoswipe",
+      pswpModule: () => import("photoswipe"),
+    })
 
-  lightbox.init()
+    lightbox.init()
+  }
 }
