@@ -6,6 +6,7 @@ on:
 jobs:
   prune:
     name: Prune Deployments
+    runs-on: ubuntu-latest
     steps:
       - uses: go-fjords/cloudflare-delete-deployments-action@main
     with:
