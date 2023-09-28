@@ -6,21 +6,22 @@ function removeExistingHighlight() {
   }
 }
 
-function highlightHeading(id?: string) {
+function highlightHeading(hash?: string) {
   removeExistingHighlight()
 
-  if (!id && !window.location.hash) return
-
-  document.getElementById(id ?? window.location.hash.substring(1))?.classList.add("toc-highlight")
+  if (hash || window.location.hash) {
+    document.getElementById(hash?.substring(1) ?? window.location.hash.substring(1))?.classList.add("toc-highlight")
+  }
 }
 
 function closeOnClick() {
   const toggle: HTMLInputElement = document.getElementById("toc-toggle") as HTMLInputElement
+  const links: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(".toc-container a")
 
-  document.querySelectorAll(".toc-container a").forEach(link => {
+  links.forEach(link => {
     link.addEventListener("click", () => {
       toggle.checked = false
-      highlightHeading()
+      highlightHeading(link.hash)
     })
   })
 }
@@ -30,7 +31,7 @@ function handleAnchorClicks() {
 
   links.forEach(link => {
     link.addEventListener("click", () => {
-      highlightHeading(link.hash.substring(1))
+      highlightHeading(link.hash)
     })
   })
 }
