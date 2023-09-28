@@ -4,7 +4,8 @@ on:
   push:
 
 jobs:
-  - name: Prune Deployments
+  prune:
+    name: Prune Deployments
     uses: go-fjords/cloudflare-delete-deployments-action@main
     with:
       token: ${{ secrets.CLOUDFLARE_TOKEN }}
