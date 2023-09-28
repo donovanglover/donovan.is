@@ -1,3 +1,4 @@
+import PhotoSwipe from "photoswipe"
 import PhotoSwipeLightbox from "photoswipe/lightbox"
 
 function createLinkFromImage(image: HTMLImageElement): HTMLAnchorElement {
@@ -29,7 +30,7 @@ export default function photoswipe() {
     const lightbox = new PhotoSwipeLightbox({
       gallery: "article",
       children: ".photoswipe",
-      pswpModule: () => import("photoswipe"),
+      pswpModule: PhotoSwipe,
     })
 
     lightbox.init()
