@@ -1,0 +1,7 @@
+name: Prune Deployments
+uses: go-fjords/cloudflare-delete-deployments-action@main
+with:
+  token: ${{ secrets.CLOUDFLARE_TOKEN }}
+  project: ${{ secrets.PROJECT }}
+  account: ${{ secrets.ACCOUNT }}
+  branch: ${{ secrets.BRANCH }}
