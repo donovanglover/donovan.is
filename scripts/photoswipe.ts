@@ -33,6 +33,18 @@ export default function photoswipe() {
       pswpModule: PhotoSwipe,
     })
 
+    lightbox.on("uiRegister", () => {
+      lightbox.pswp?.ui?.registerElement({
+        name: "caption",
+        appendTo: "root",
+        onInit: el => {
+          lightbox.pswp?.on("change", () => {
+            el.innerHTML = lightbox.pswp?.currSlide?.data.element?.querySelector("img")?.getAttribute("alt") ?? ""
+          })
+        },
+      })
+    })
+
     lightbox.init()
   }
 }
