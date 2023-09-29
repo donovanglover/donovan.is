@@ -36,8 +36,15 @@ function handleAnchorClicks() {
   })
 }
 
+function handleBackToTop() {
+  document.getElementById("top-button")?.addEventListener("click", () => {
+    removeExistingHighlight()
+  })
+}
+
 export default function tableOfContents() {
   highlightHeading()
   handleAnchorClicks()
+  handleBackToTop()
   closeOnClick()
 }
