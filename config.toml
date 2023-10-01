@@ -30,6 +30,7 @@ invert_title_order = true
 browser_theme_color = "#5b5b65"
 menu = [
     { name = "blog", url = "blog/" },
+    { name = "work", url = "work/" },
     { name = "projects", url = "projects/" },
     { name = "about", url = "about/" },
 ]
