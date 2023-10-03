@@ -42,10 +42,13 @@ function setTheme(theme: string, saveToLocalStorage = false) {
 }
 
 // Function to switch between dark and light themes.
-function switchTheme() {
+function switchTheme(event: Event) {
   // Set the new theme based on the current theme.
   const newTheme = currentTheme === "dark" ? "light" : "dark"
   setTheme(newTheme, true) // Save the theme to localStorage when the user changes it.
+
+  const themeSwitcher: HTMLElement = event.target as HTMLElement
+  themeSwitcher.setAttribute("aria-pressed", currentTheme === "dark" ? "true" : "false")
 }
 
 // Update the theme based on system preference if the user hasn't manually changed the theme.
@@ -58,4 +61,7 @@ export default function themeSwitcher() {
   const themeSwitcher = document.querySelector(".theme-switcher")
 
   themeSwitcher?.addEventListener("click", switchTheme, false)
+  themeSwitcher?.setAttribute("role", "button")
+  themeSwitcher?.setAttribute("aria-label", "Toggle dark mode")
+  themeSwitcher?.setAttribute("aria-pressed", currentTheme === "dark" ? "true" : "false")
 }
