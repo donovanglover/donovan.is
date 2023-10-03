@@ -35,6 +35,7 @@ menu = [
     { name = "about", url = "about/" },
 ]
 socials = [
+    { name = "mastodon", url = "https://hachyderm.io/@donovanglover", icon = "mastodon" },
     { name = "github", url = "https://github.com/donovanglover", icon = "github" },
     { name = "linkedin", url = "https://linkedin.com/in/donovanglover", icon = "linkedin" },
     { name = "matrix", url = "https://matrix.to/#/@donovan:mozilla.org", icon = "matrix" },
