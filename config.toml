@@ -37,6 +37,7 @@ menu = [
 socials = [
     { name = "github", url = "https://github.com/donovanglover", icon = "github" },
     { name = "linkedin", url = "https://linkedin.com/in/donovanglover", icon = "linkedin" },
+    { name = "matrix", url = "https://matrix.to/#/@donovan:mozilla.org", icon = "matrix" },
 ]
 remote_repository_url = "https://github.com/donovanglover/donovan.is"
 remote_repository_branch = "master"
