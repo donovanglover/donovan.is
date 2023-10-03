@@ -16,4 +16,4 @@ extra: {
 
 I'm a **software engineer** in **Atlanta, GA** that specializes in <a href="/linux/" data-turbo-preload><strong>Linux</strong></a>, <a href="/rust/" data-turbo-preload><strong>Rust</strong></a>, and <a href="/web/" data-turbo-preload><strong>full stack web development</strong></a>. I build fast, well-designed **applications** that abstract complexity and provide **value** to users.
 
-[GitHub](https://github.com/donovanglover) | [LinkedIn](https://linkedin.com/in/donovanglover) | <a href="#" data-encoded-email="aGlAZG9ub3Zhbi5pcz9zdWJqZWN0PUhlbGxvISZib2R5PUhpIERvbm92YW4hIFNvIEkgd2FzIGNoZWNraW5nIG91dCB5b3VyIGJsb2cgYW5kLi4u">Email</a>
+[Learn more about me](/about/).
