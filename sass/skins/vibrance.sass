@@ -113,3 +113,13 @@ html
 
 a:not(.no-hover-padding)::before
   position: inherit
+
+@media (hover: none) and (pointer: coarse)
+  .nav-links:hover
+    color: inherit
+    background-color: inherit
+  .home-title:hover
+    color: var(--primary-color)
+    background-color: inherit
+  .home-title:not(.no-hover-padding)::before
+    background-color: inherit
