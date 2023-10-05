@@ -47,3 +47,7 @@ document.addEventListener("turbo:before-render", () => {
   removeExistingHighlight()
   document.getElementById("button-container")?.remove()
 })
+
+document.addEventListener("turn:enter", () => {
+  document.getElementById("button-container")?.classList.remove("hidden")
+})
