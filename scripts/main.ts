@@ -45,8 +45,5 @@ document.addEventListener("turbo:load", () => {
 
 document.addEventListener("turbo:before-render", () => {
   removeExistingHighlight()
-})
-
-document.addEventListener("turbo:before-cache", () => {
   document.getElementById("button-container")?.remove()
 })
