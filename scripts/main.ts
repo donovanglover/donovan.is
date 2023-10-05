@@ -32,6 +32,7 @@ import themeSwitcher from "./themeSwitcher"
 
 document.addEventListener("DOMContentLoaded", () => {
   Turn.start()
+  document.getElementById("button-container")?.classList.remove("hidden")
 })
 
 document.addEventListener("turbo:load", () => {
