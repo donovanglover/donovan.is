@@ -119,8 +119,9 @@ a:not(.no-hover-padding)::before
     background-color: inherit
 
 @media (pointer: fine)
-  .pswp__caption
-    display: none
+  .pswp__caption:hover
+    opacity: 0
+    cursor: default
 
 [data-turn-exit],
 [data-turn-enter]
