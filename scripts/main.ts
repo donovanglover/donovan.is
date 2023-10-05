@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 import "@hotwired/turbo"
+import Turn from "@domchristie/turn"
 import copyToClipboard from "./copyToClipboard"
 import decodeMail from "./decodeMail"
 import footnoteBacklinks from "./footnoteBacklinks"
@@ -28,6 +29,10 @@ import photoswipe from "./photoswipe"
 import tableOfContents from "./tableOfContents"
 import removeExistingHighlight from "./tableOfContents"
 import themeSwitcher from "./themeSwitcher"
+
+document.addEventListener("DOMContentLoaded", () => {
+  Turn.start()
+})
 
 document.addEventListener("turbo:load", () => {
   copyToClipboard()
