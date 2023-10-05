@@ -15,4 +15,12 @@ Before that, I was a malware researcher.
 
 If you want to hire me, I specialize in [Linux](/linux/), [Rust](/rust/), and [full stack web development](/web/).
 
-Outside of programming, I'm interested in linguistics and multisensory art.
+Outside of programming, I'm interested in linguistics and multisensory art.[^hobby]
+
+<hr>
+
+<small class="footnotes">
+
+[^hobby]: More specifically, I'm interested in the intersection between music, language, kinesthetics, mathematics, and visual arts.
+
+</small>
