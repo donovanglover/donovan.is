@@ -126,11 +126,12 @@ a:not(.no-hover-padding)::before
 
 html.turn-no-view-transitions.turn-advance.turn-exit [data-turn-exit]
   animation-name: fade-out-up
-  animation-duration: .3s
+  animation-duration: 0.05s
 
 html.turn-no-view-transitions.turn-advance.turn-enter [data-turn-enter]
   animation-name: fade-in-up
-  animation-duration: .6s
+  animation-duration: 0.2s
+  animation-timing-function: ease-out
 
 html.turn-no-view-transitions.turn-before-exit [data-turn-exit],
 html.turn-no-view-transitions.turn-exit [data-turn-exit]
@@ -139,17 +140,13 @@ html.turn-no-view-transitions.turn-exit [data-turn-exit]
 @keyframes fade-out-up
   0%
     opacity: 1
-    transform: translateZ(0)
 
   100%
     opacity: 0
-    transform: translate3d(0, -4rem, 0)
 
 @keyframes fade-in-up
   0%
     opacity: 0
-    transform: translate3d(0, 4rem, 0)
 
   100%
     opacity: 1
-    transform: translateZ(0)
