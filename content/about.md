@@ -23,7 +23,7 @@ Outside of programming, I'm interested in linguistics and multisensory art.[^hob
 
 [^learn]: I've taken over 100 online courses, including those from [Code School](https://web.archive.org/web/20170314104951/https://www.codeschool.com/). I self-studied [Calculus](https://github.com/donovanglover/awesome-calculus) at the age of 16. More recently, I'm prioritizing the skills I value the most to become really good at those skills.
 
-[^competitive]: I qualified for [USACO Platinum Division](https://web.archive.org/web/20200222222847/http://usaco.org/current/data/open17_gold_results.html) and [won a state-level programming challenge](https://www.gastc.org/s/2017_Scholarships.pdf) in a population of 10 million.
+[^competitive]: I was a [USACO Platinum Division contestant](https://web.archive.org/web/20200222222847/http://usaco.org/current/data/open17_gold_results.html) and [won a state-level programming challenge](https://www.gastc.org/s/2017_Scholarships.pdf) in a population of 10 million.
 
 [^malware]: I specialized in malware analysis and mainly dealt with reverse engineering obfuscated JavaScript payloads.
 
