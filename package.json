@@ -6,7 +6,7 @@
   "scripts": {
     "build": "bun build --minify scripts/main.ts --outfile=static/bundle.min.js",
     "dev": "bun build --watch scripts/main.ts --outfile=static/bundle.min.js",
-    "format": "biome check --apply scripts"
+    "format": "biome check --apply scripts tests index.ts"
   },
   "dependencies": {
     "@domchristie/turn": "^3.1.1",
