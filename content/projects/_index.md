@@ -10,4 +10,4 @@ extra: {
 }
 ---
 
-Software and libraries I made for fun.
+Free and open source software I made for fun. Most are written in [Rust](/tags/rust/) and [TypeScript](/tags/typescript/).
