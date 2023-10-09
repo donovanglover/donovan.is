@@ -2,6 +2,7 @@
 title: "hyprnome"
 description: "GNOME-like workspace switching in Hyprland."
 weight: 1
+aliases: ["hyprnome"]
 
 taxonomies: {
   tags: ["Rust", "Linux"]

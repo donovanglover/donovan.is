@@ -2,6 +2,7 @@
 title: "hyprdim"
 description: "Automatically dim windows in borderless Hyprland environments."
 weight: 1
+aliases: ["hyprdim"]
 
 taxonomies: {
   tags: ["Rust", "Linux"]
