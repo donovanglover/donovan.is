@@ -1,7 +1,7 @@
 ---
 title: "hyprdim"
 description: "Automatically dim windows in borderless Hyprland environments."
-weight: 1
+weight: 10
 aliases: ["hyprdim"]
 
 taxonomies: {

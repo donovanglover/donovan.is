@@ -1,7 +1,7 @@
 ---
 title: "hyprnome"
 description: "GNOME-like workspace switching in Hyprland."
-weight: 1
+weight: 10
 aliases: ["hyprnome"]
 
 taxonomies: {
