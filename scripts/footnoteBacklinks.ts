@@ -24,7 +24,7 @@
 
 // Assign unique IDs to the footnote references based on their hashes.
 function assignReferenceIds() {
-  const references = document.querySelectorAll(".footnote-reference")
+  const references = document.getElementsByClassName("footnote-reference")
   for (const ref of references) {
     const element = ref.children[0]
 
@@ -36,7 +36,7 @@ function assignReferenceIds() {
 
 // Create backlinks for each footnote definition if a corresponding reference exists.
 function createFootnoteBacklinks() {
-  const footnotes = document.querySelectorAll(".footnote-definition")
+  const footnotes = document.getElementsByClassName("footnote-definition")
   for (const footnote of footnotes) {
     const backlinkId = `ref:${footnote.id}`
 
@@ -52,6 +52,8 @@ function createFootnoteBacklinks() {
 }
 
 export default function footnoteBacklinks() {
-  assignReferenceIds()
-  createFootnoteBacklinks()
+  if (document.getElementsByClassName("footnote-backlink").length === 0) {
+    assignReferenceIds()
+    createFootnoteBacklinks()
+  }
 }
