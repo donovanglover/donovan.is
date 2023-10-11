@@ -32,7 +32,7 @@ menu = [
     { name = "blog", url = "blog/" },
     { name = "work", url = "work/" },
     { name = "projects", url = "projects/" },
-    { name = "about", url = "about/" },
+    { name = "now", url = "now/" },
 ]
 socials = [
     { name = "mastodon", url = "https://hachyderm.io/@donovanglover", icon = "mastodon" },
