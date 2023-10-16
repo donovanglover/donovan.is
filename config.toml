@@ -26,6 +26,7 @@ quick_navigation_buttons = true
 long_date_format = "%B %-d %Y"
 short_date_format = "%b %-d %Y"
 email = "aGlAZG9ub3Zhbi5pcz9zdWJqZWN0PUhlbGxvISZib2R5PUhpIERvbm92YW4hIFNvIEkgd2FzIGNoZWNraW5nIG91dCB5b3VyIGJsb2cgYW5kLi4u"
+copyright = "[About](/about/) $SEPARATOR [Contact](/contact/) $SEPARATOR [Notes](/notes/)"
 invert_title_order = true
 browser_theme_color = "#5b5b65"
 menu = [
