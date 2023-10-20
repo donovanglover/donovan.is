@@ -21,7 +21,7 @@ I am a package maintainer for [NixOS](https://nixos.wiki/wiki/Overview_of_the_Ni
 
 Here is a [list of packages I maintain](https://search.nixos.org/packages?channel=unstable&from=0&size=50&buckets={%22package_attr_set%22%3A[]%2C%22package_license_set%22%3A[]%2C%22package_maintainers_set%22%3A[%22Donovan%20Glover%22]%2C%22package_platforms%22%3A[]}&sort=relevance&type=packages&query=*). I also know how to create packages for [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) and `rpm`-based distributions like [Fedora](https://docs.fedoraproject.org/en-US/project/).
 
-## System Administration
+## Systems Administration
 
 I have experience setting up and maintaining servers that use [Ubuntu](https://ubuntu.com/server), [CentOS](https://www.centos.org/), and more. [I have installed Gentoo](https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation) before and am able to easily get acquainted with any Linux distribution.
 
