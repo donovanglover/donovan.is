@@ -52,6 +52,7 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 ## Fullstack
 
 - [Prisma](https://www.prisma.io/docs/getting-started)
+- [Nuxt](https://nuxt.com/)
 
 ## Rust
 
@@ -62,6 +63,11 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 - [Nixpkgs Manual](https://nixos.org/manual/nixpkgs/unstable/)
 - [Nix Reference Manual](https://nixos.org/manual/nix/stable/)
 - [The Purely Functional Software Deployment Model](https://edolstra.github.io/pubs/phd-thesis.pdf)
+
+## Docker
+
+- [linuxserver](https://fleet.linuxserver.io/)
+- [bitnami](https://bitnami.com/stacks/containers)
 
 ## Computer Science
 
