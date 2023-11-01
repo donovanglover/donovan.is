@@ -42,8 +42,3 @@ socials = [
 ]
 remote_repository_url = "https://github.com/donovanglover/donovan.is"
 remote_repository_branch = "master"
-footer_menu = [
-    { name = "About", url = "about", trailing_slash = true },
-    { name = "Contact", url = "contact", trailing_slash = true },
-    { name = "Notes", url = "notes", trailing_slash = true },
-]
