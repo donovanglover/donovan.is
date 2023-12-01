@@ -40,19 +40,35 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 - [Jeff Huang](https://jeffhuang.com/)
 - [Max Böck](https://mxb.dev/)
 - [Amy Hupe](https://amyhupe.co.uk/)
+- [Amyspark](https://www.amyspark.me/)
+- [Jared White](https://jaredwhite.com/)
 
 ## Art Websites
 
 - [Caroline Kunka](https://carolinekunka.com/)
 
+## Blogs
+
+- [Thomas Leonard](https://roscidus.com/blog/)
+- [Domenic Denicola](https://blog.domenic.me/)
+- [Ana Hobden](https://hoverbear.org/blog/)
+- [Thomasorus](https://thomasorus.com/journal.html)
+- [Rik Voorhaar](https://www.rikvoorhaar.com/)
+- [Travis Fischer](https://transitivebullsh.it/)
+- [Michael Palmos](https://toqoz.fyi/)
+- [Josh Manders](https://joshmanders.com/)
+- [Gürkan](https://gurkan.in/posts/)
+
 ## Indie Web
 
 - [Shifoo](https://shi.foo/)
+- [lamp.wtf](https://lamp.wtf/)
 
 ## Fullstack
 
 - [Prisma](https://www.prisma.io/docs/getting-started)
 - [Nuxt](https://nuxt.com/)
+- [Next.js](https://nextjs.org/learn)
 
 ## Rust
 
@@ -68,6 +84,11 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 
 - [linuxserver](https://fleet.linuxserver.io/)
 - [bitnami](https://bitnami.com/stacks/containers)
+
+## Open Source
+
+- [Mindustry](https://github.com/Anuken/Mindustry)
+- [Mullvad VPN](https://github.com/mullvad/mullvadvpn-app)
 
 ## Computer Science
 
