@@ -6,14 +6,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Donovan Glover',
-  description: 'Donovan is a software engineer in Atlanta, GA.',
+  description: 'Donovan is a software engineer in Atlanta, GA.'
 }
 
 export interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
     <html lang="en-US">
       <body className={inter.className}>{children}</body>
