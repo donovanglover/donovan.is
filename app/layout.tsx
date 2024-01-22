@@ -50,7 +50,7 @@ export interface RootLayoutProps {
 
 export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
-    <html lang="en-US">
+    <html lang="en-US" className='text-white-400 bg-black-400'>
       <body className={myFont.className}>{children}</body>
     </html>
   )

@@ -3,7 +3,7 @@ import schemes from './schemes.json'
 
 type ThemeFunction = (tailwindClass: string) => string
 
-const palette = schemes['fruit-soda']
+const palette = schemes.monokai
 
 const tailwindConfig = {
   content: [

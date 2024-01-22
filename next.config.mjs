@@ -18,6 +18,13 @@ const nextConfig = {
   swcMinify: true,
 }
 
+/** @type {import('rehype-pretty-code').Options} */
+const prettyCodeOptions = {
+  theme: "monokai",
+  defaultLang: "rust",
+  keepBackground: true
+};
+
 const withMDX = createMDX({
   options: {
     remarkPlugins: [
@@ -30,7 +37,7 @@ const withMDX = createMDX({
     rehypePlugins: [
       rehypeSlug,
       rehypeAutolinkHeadings,
-      rehypePrettyCode
+      [rehypePrettyCode, prettyCodeOptions]
     ],
   },
 })
