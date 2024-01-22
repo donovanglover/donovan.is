@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -28,7 +29,8 @@ const withMDX = createMDX({
 
     rehypePlugins: [
       rehypeSlug,
-      rehypeAutolinkHeadings
+      rehypeAutolinkHeadings,
+      rehypePrettyCode
     ],
   },
 })
