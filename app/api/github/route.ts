@@ -12,6 +12,7 @@ export interface Repo {
   language: string
   license: string
   tags: string[]
+  website: string
 }
 
 export async function GET (): Promise<Response> {
@@ -37,7 +38,8 @@ export async function GET (): Promise<Response> {
         stars: repo.stargazers_count,
         language: repo.language,
         license: repo.license,
-        tags: repo.topics
+        tags: repo.topics,
+        website: repo.homepage
       })
     })
 
