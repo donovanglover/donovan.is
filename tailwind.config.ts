@@ -60,7 +60,18 @@ const tailwindConfig = {
             '--tw-prose-pre-code': theme('colors.white[400]'),
             '--tw-prose-pre-bg': theme('colors.white[400]'),
             '--tw-prose-th-borders': theme('colors.white[400]'),
-            '--tw-prose-td-borders': theme('colors.white[400]')
+            '--tw-prose-td-borders': theme('colors.white[400]'),
+            code: {
+              'border-radius': '0.25rem'
+            },
+            'code::before': {
+              content: '""',
+              'padding-left': '0.25rem'
+            },
+            'code::after': {
+              content: '""',
+              'padding-right': '0.25rem'
+            }
           }
         }
       }),
