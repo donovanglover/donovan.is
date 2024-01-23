@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import '@fontsource-variable/noto-sans-jp'
 import localFont from 'next/font/local'
 import './globals.css'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
   title: 'Donovan Glover',
   description: 'Donovan is a software engineer in Atlanta, GA.'
 }
 
-const myFont = localFont({
+const mapleMono = localFont({
   src: [
     {
       path: '../fonts/MapleMono-Light.woff2',
@@ -41,7 +42,8 @@ const myFont = localFont({
       style: 'italic'
     }
   ],
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-mono'
 })
 
 export interface RootLayoutProps {
@@ -50,8 +52,15 @@ export interface RootLayoutProps {
 
 export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
-    <html lang="en-US" className='text-white-400 bg-black-400'>
-      <body className={myFont.className}>{children}</body>
+    <html lang="en-US" className={clsx('text-white-400 bg-black-400', mapleMono.variable)}>
+      <body>
+        <nav>
+          <ul>
+            <li>Donovan Glover</li>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }

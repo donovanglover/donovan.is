@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Noto Sans JP Variable', sans-serif;
+:root {
+  --font-sans: 'Noto Sans JP Variable', sans-serif;
 }
