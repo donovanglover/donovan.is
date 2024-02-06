@@ -1,5 +1,5 @@
 import type { MDXComponents } from 'mdx/types'
-import Image from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 
 export function useMDXComponents (components: MDXComponents): MDXComponents {
@@ -16,18 +16,18 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       return <a href={props.href}>{props.children}</a>
     },
 
-    img: ({ src, alt }) => {
-      if (src === undefined || alt === undefined) {
+    img: (props: ImageProps) => {
+      if (props.src === undefined || props.alt === undefined) {
         console.error('ERROR: Image has missing src/alt')
         return
       }
 
       return (
         <Image
-          src={src}
-          alt={alt}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
+          placeholder="blur"
+          {...props}
         />
       )
     },

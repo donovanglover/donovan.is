@@ -6,6 +6,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
 import rehypePrettyCode from 'rehype-pretty-code'
+import remarkMdxImages from 'remark-mdx-images'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,9 +21,7 @@ const nextConfig = {
 
 /** @type {import('rehype-pretty-code').Options} */
 const prettyCodeOptions = {
-  theme: "monokai",
-  defaultLang: "rust",
-  keepBackground: true
+  theme: "monokai"
 };
 
 const withMDX = createMDX({
@@ -31,6 +30,7 @@ const withMDX = createMDX({
       remarkGfm,
       remarkToc,
       remarkFrontmatter,
+      remarkMdxImages,
       [remarkMdxFrontmatter, { name: 'metadata' }]
     ],
 
