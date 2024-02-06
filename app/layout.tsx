@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { mapleMono } from '@/app/_lib/fonts'
-import '@/app/_styles/main.sass'
+import { mapleMono } from '@/lib/fonts'
+import '@/styles/main.sass'
 import clsx from 'clsx'
 import Link from 'next/link'
 
