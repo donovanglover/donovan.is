@@ -20,15 +20,27 @@ dependencies:
   '@next/mdx':
     specifier: ^14.1.0
     version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+  '@tippyjs/react':
+    specifier: ^4.2.6
+    version: 4.2.6(react-dom@18.2.0)(react@18.2.0)
   '@types/mdx':
     specifier: ^2.0.10
     version: 2.0.10
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  feed:
+    specifier: ^4.2.2
+    version: 4.2.2
+  holy-loader:
+    specifier: ^2.2.9
+    version: 2.2.9(react@18.2.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
+  photoswipe:
+    specifier: ^5.4.3
+    version: 5.4.3
   react:
     specifier: ^18
     version: 18.2.0
@@ -65,9 +77,6 @@ dependencies:
   shikiji:
     specifier: ^0.9.0
     version: 0.9.19
-  tippy.js:
-    specifier: ^6.3.7
-    version: 6.3.7
 
 devDependencies:
   '@cloudflare/next-on-pages':
@@ -893,6 +902,17 @@ packages:
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.4.1
     dev: true
+
+  /@tippyjs/react@4.2.6(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-91RicDR+H7oDSyPycI13q3b7o4O60wa2oRbjlz2fyRLmHImc4vyDwuUP8NtZaN0VARJY5hybvDYrFzhY9+Lbyw==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tippy.js: 6.3.7
+    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -3370,6 +3390,13 @@ packages:
       pend: 1.2.0
     dev: true
 
+  /feed@4.2.2:
+    resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
+    engines: {node: '>=0.4.0'}
+    dependencies:
+      xml-js: 1.6.11
+    dev: false
+
   /file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -3799,6 +3826,14 @@ packages:
       hast-util-parse-selector: 4.0.0
       property-information: 6.4.0
       space-separated-tokens: 2.0.2
+    dev: false
+
+  /holy-loader@2.2.9(react@18.2.0):
+    resolution: {integrity: sha512-n+Cg5wXkgjLM67gvuqJuMllZCYhg/5c0EeNGatEJyIoF/421Igak6MaFACSxBCQk+EY5sLT070M5LhaiBreFbw==}
+    peerDependencies:
+      react: '>= 16.0.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /htmlparser2@8.0.2:
@@ -5485,6 +5520,11 @@ packages:
       is-reference: 3.0.2
     dev: false
 
+  /photoswipe@5.4.3:
+    resolution: {integrity: sha512-9UC6oJBK4oXFZ5HcdlcvGkfEHsVrmE4csUdCQhEjHYb3PvPLO3PG7UhnPuOgjxwmhq5s17Un5NUdum01LgBDng==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
+
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -5985,6 +6025,10 @@ packages:
       chokidar: 3.5.3
       immutable: 4.3.5
       source-map-js: 1.0.2
+
+  /sax@1.3.0:
+    resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
+    dev: false
 
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
@@ -7052,6 +7096,13 @@ packages:
     dependencies:
       os-paths: 4.4.0
     dev: true
+
+  /xml-js@1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
+    dependencies:
+      sax: 1.3.0
+    dev: false
 
   /xxhash-wasm@1.0.2:
     resolution: {integrity: sha512-ibF0Or+FivM9lNrg+HGJfVX8WJqgo+kCLDc4vx6xMeTce7Aj+DLttKbxxRR/gNLSAelRc1omAPlJ77N/Jem07A==}
