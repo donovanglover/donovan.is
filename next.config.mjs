@@ -10,6 +10,10 @@ import remarkMdxImages from 'remark-mdx-images'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    unoptimized: true,
+  },
+
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 
   typescript: {
