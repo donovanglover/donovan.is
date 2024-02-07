@@ -4,19 +4,31 @@ import Link from 'next/link'
 
 export function useMDXComponents (components: MDXComponents): MDXComponents {
   return {
-    a: (props) => {
-      if (typeof props.href === 'string' && props.href.startsWith('#')) {
-        return <Link href={props.href} replace>{props.children}</Link>
+    a: ({ href, children }) => {
+      if (typeof href !== 'string') {
+        throw new Error('A link in a markdown file is missing a url.')
       }
 
-      if (typeof props.href === 'string' && props.href.startsWith('/')) {
-        return <Link href={props.href}>{props.children}</Link>
+      if (href.startsWith('#')) {
+        return <Link href={href} replace>{children}</Link>
       }
 
-      return <a href={props.href}>{props.children}</a>
+      if (href.startsWith('/')) {
+        return <Link href={href}>{children}</Link>
+      }
+
+      if (href.startsWith('http://')) {
+        throw new Error(`http:// links are disallowed. Change ${href}`)
+      }
+
+      if (href.startsWith('https://')) {
+        return <a target='_blank' rel="noopener noreferrer" href={href}>{children}</a>
+      }
+
+      return <a href={href}>{children}</a>
     },
 
-    img: (props: ImageProps) => {
+    img: (props) => {
       if (props.src === undefined || props.alt === undefined) {
         console.error('ERROR: Image has missing src/alt')
         return
