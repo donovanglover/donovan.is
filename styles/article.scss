@@ -1,0 +1,14 @@
+@media screen and (min-width: 1280px) {
+  p:has(> img) {
+    margin: 0 calc(50% - 600px)
+  }
+}
+
+p:has(> img + em) {
+  text-align: center;
+}
+
+img + em {
+  display: block;
+  margin-top: -1rem;
+}
