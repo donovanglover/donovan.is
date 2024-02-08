@@ -4,14 +4,10 @@ export interface NotesLayoutProps {
 
 export default function NotesLayout ({ children }: NotesLayoutProps): React.ReactElement {
   return (
-    <>
-      <div className="prose prose-base16 p-4 mx-auto prose-lg">
+    <main>
+      <div className="prose dark:prose-invert p-4 mx-auto prose-xl font-serif">
         {children}
       </div>
-      <hr />
-      <footer>
-        <p className="p-4">Mastodon | GitHub</p>
-      </footer>
-    </>
+    </main>
   )
 }

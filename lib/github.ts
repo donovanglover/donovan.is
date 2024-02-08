@@ -46,5 +46,7 @@ export default async function getProjects (): Promise<Project[]> {
     })
   }
 
+  projects.sort((a, b) => b.stars - a.stars)
+
   return projects
 }

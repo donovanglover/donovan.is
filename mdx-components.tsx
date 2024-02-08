@@ -1,12 +1,13 @@
 import type { MDXComponents } from 'mdx/types'
-import Image, { type ImageProps } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export function useMDXComponents (components: MDXComponents): MDXComponents {
   return {
     a: ({ href, children }) => {
       if (typeof href !== 'string') {
-        throw new Error('A link in a markdown file is missing a url.')
+        console.error('ERROR: A link in a markdown file is missing a url.')
+        return
       }
 
       if (href.startsWith('#')) {
@@ -18,7 +19,8 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith('http://')) {
-        throw new Error(`http:// links are disallowed. Change ${href}`)
+        console.error(`ERROR: http:// links are disallowed. Change ${href}`)
+        return
       }
 
       if (href.startsWith('https://')) {
@@ -28,18 +30,19 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       return <a href={href}>{children}</a>
     },
 
-    img: (props) => {
-      if (props.src === undefined || props.alt === undefined) {
+    img: ({ src, alt }) => {
+      if (src === undefined || alt === undefined) {
         console.error('ERROR: Image has missing src/alt')
         return
       }
 
       return (
         <Image
+          src={src}
+          alt={alt}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
           placeholder="blur"
-          {...props}
         />
       )
     },

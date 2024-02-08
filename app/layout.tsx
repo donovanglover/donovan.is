@@ -1,14 +1,10 @@
-import { mapleMono } from '@/lib/fonts'
 import '@/styles/main.sass'
 import clsx from 'clsx'
+import HolyLoader from 'holy-loader'
+import { mapleMono } from '@/lib/fonts'
 import { siteMetadata } from '@/lib/metadata'
 import Navbar from '@/components/Navbar'
-import HolyLoader from 'holy-loader'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../tailwind.config'
 import Footer from '@/components/Footer'
-
-const fullConfig = resolveConfig(tailwindConfig)
 
 export const metadata = siteMetadata
 
@@ -18,12 +14,13 @@ export interface RootLayoutProps {
 
 export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
-    <html lang="en-US" className={clsx('text-white-400 bg-black-400', mapleMono.variable)}>
-      <body>
-        <HolyLoader color={fullConfig.theme.colors.blue} />
+    <html lang="en-US" className={clsx(mapleMono.variable)}>
+      <body className="text-[#222226] dark:bg-[#1f1f1f] dark:text-[#D4D4D4]">
+        <HolyLoader color='red' />
         <Navbar />
-        <div className="pb-8" />
-        {children}
+        <div className="px-4 py-8 mx-auto container">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
