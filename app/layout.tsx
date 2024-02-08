@@ -1,4 +1,5 @@
-import '@/styles/main.sass'
+import '@/styles/fonts.css'
+import '@/styles/generated.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
 import { mapleMono } from '@/lib/fonts'

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently 'next dev' 'tailwindcss -i styles/main.css -o styles/generated.css --watch'",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -22,6 +22,7 @@
     "@tippyjs/react": "^4.2.6",
     "@types/mdx": "^2.0.11",
     "clsx": "^2.1.0",
+    "concurrently": "^8.2.2",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "holy-loader": "^2.2.9",
