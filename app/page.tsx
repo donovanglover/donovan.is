@@ -7,7 +7,7 @@ export default async function HomePage (): Promise<React.ReactElement> {
 
   return (
     <main className="prose dark:prose-invert mx-auto container">
-      <h2>Writing</h2>
+      <h2 className="text-3xl font-serif">Writing</h2>
       {posts.map(post => {
         return (
           <p key={post.slug}>
@@ -18,12 +18,12 @@ export default async function HomePage (): Promise<React.ReactElement> {
           </p>
         )
       })}
-      <h2>Making</h2>
+      <h2 className="text-3xl font-serif">Projects</h2>
       {projects.map(project => {
         return (
-          <p key={project.slug}>
+          <span key={project.slug} className="mr-3">
             <Link href={`/${project.slug}`}>{project.title}</Link>
-          </p>
+          </span>
         )
       })}
     </main>
