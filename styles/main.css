@@ -1,4 +1,4 @@
-@import 'tailwind.css';
+@import 'fonts.css';
 
 ::selection {
   background: theme('colors.red.700')33;

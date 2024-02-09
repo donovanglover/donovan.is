@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently 'next dev' 'tailwindcss -i styles/main.css -o styles/generated.css --watch'",
-    "build": "next build",
+    "dev": "concurrently 'next dev' 'tailwindcss -i styles/tailwind.css -o styles/generated.css --watch'",
+    "build": "tailwindcss -i styles/tailwind.css -o styles/generated.css && next build",
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
