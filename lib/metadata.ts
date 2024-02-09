@@ -16,6 +16,7 @@ export const meta: {
   social: {
     mastodon: string
     github: string
+    linkedin: string
   }
 } = {
   title: 'Donovan Glover',
@@ -25,7 +26,8 @@ export const meta: {
   lang: 'en-US',
   social: {
     mastodon: 'https://hachyderm.io/@donovanglover',
-    github: 'https://github.com/donovanglover'
+    github: 'https://github.com/donovanglover',
+    linkedin: 'https://linkedin.com/in/donovanglover'
   }
 }
 
