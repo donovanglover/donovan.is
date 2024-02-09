@@ -47,9 +47,15 @@ main {
   }
 }
 
+p:has(> img),
+figure:has(> pre) {
+  margin: 0 calc(50% - 45vw);
+}
+
 @media screen and (min-width: 1280px) {
-  p:has(> img) {
-    margin: 0 calc(50% - 600px)
+  p:has(> img),
+  figure:has(> pre) {
+    margin: 0 calc(50% - 520px)
   }
 }
 
@@ -59,5 +65,7 @@ p:has(> img + em) {
 
 img + em {
   display: block;
-  margin-top: -2rem;
+  margin-top: -1.5rem;
+  font-style: normal;
+  font-size: 90%;
 }
