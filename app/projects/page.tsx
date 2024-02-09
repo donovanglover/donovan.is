@@ -15,12 +15,12 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
 
   return (
     <main className="font-serif">
-      <h2 className="text-4xl font-bold text-center">Projects</h2>
+      <h2 className="text-5xl font-extrabold text-center pb-4">Projects</h2>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {projects.map(project => {
           return (
-            <Card key={project.id} className="xl:m-2" href={`/${project.name}`} title={project.name}>
+            <Card key={project.id} href={`/${project.name}`}>
               <h3 className="text-2xl font-bold">
                 {project.name}
                 {' '}
@@ -30,7 +30,7 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
                     ? <SiRust className="inline-block" />
                     : <span><SiTypescript className="inline-block" /> <SiReact className="inline-block" /></span>}
               </h3>
-              <p className="pt-1">{project.description}</p>
+              <p className="pt-1 grow pb-2">{project.description}</p>
               <p className="flex justify-between pt-2">
                 <span>{project.updated === project.created
                   ? project.created

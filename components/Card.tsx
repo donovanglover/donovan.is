@@ -9,10 +9,8 @@ export interface CardProps {
 
 export default function Card ({ href, className, children }: CardProps): React.ReactElement {
   return (
-    <Link href={href} className='m-4'>
-      <div className={clsx('shadow p-8', className)}>
-        {children}
-      </div>
+    <Link href={href} className={clsx('m-2 md:m-4 shadow p-8 xl:m-6 flex flex-col justify-between', className)}>
+      {children}
     </Link>
   )
 }
