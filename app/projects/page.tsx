@@ -2,19 +2,14 @@ import getProjects from '@/lib/github'
 import { FaRegStar } from 'react-icons/fa'
 import { type Metadata } from 'next'
 import Card from '@/components/Card'
+import imageNixConfig from '@/app/(content)/(projects)/nix-config/nix-config-with-pepper.jpg'
+import imageThud from '@/app/(content)/(projects)/thud/thud.jpg'
 
 export const runtime = 'edge'
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'Work I\'ve done.'
 }
-
-const tagUrl = new Map([
-  ['advent-of-code', 'https://adventofcode.com/'],
-  ['aoc', 'https://adventofcode.com/'],
-  ['hyprland', 'https://hyprland.org/'],
-  ['rust', 'https://www.rust-lang.org/']
-])
 
 export default async function ProjectsPage (): Promise<React.ReactElement> {
   const projects = await getProjects()
@@ -30,8 +25,7 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
               <h3 className="text-2xl font-bold">{project.name}</h3>
               <p>{project.description}</p>
               <p>{project.created}&mdash;{project.updated === 2024 ? 'Now' : project.updated}</p>
-              <p><FaRegStar />{project.stars}</p>
-              <ul>{project.tags.map(tag => <li className="inline-block px-2 mr-2 mb-2" key={tag}>{tag}</li>)}</ul>
+              {project.stars >= 5 && <p><FaRegStar />{project.stars}</p>}
             </Card>
           )
         })}
