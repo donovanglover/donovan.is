@@ -3,6 +3,8 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 import { LuSun, LuMoon } from 'react-icons/lu'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
 
 export default function ChangeTheme (): React.ReactElement {
   const [theme, setTheme] = useState(0)
@@ -14,9 +16,11 @@ export default function ChangeTheme (): React.ReactElement {
   }
 
   return (
-    <button onClick={handleClick} className="text-2xl p-4">
-      <LuSun className={clsx(theme === 0 || 'hidden')} />
-      <LuMoon className={clsx(theme === 1 || 'hidden')} />
-    </button>
+    <Tippy content={theme === 0 ? 'Turn off the lights' : 'Turn on the lights'}>
+      <button onClick={handleClick} className="text-2xl p-4">
+        <LuSun className={clsx(theme === 0 || 'hidden')} />
+        <LuMoon className={clsx(theme === 1 || 'hidden')} />
+      </button>
+    </Tippy>
   )
 }
