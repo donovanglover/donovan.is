@@ -16,7 +16,7 @@ export default function ChangeTheme (): React.ReactElement {
   }
 
   return (
-    <Tippy content={theme === 0 ? 'Turn off the lights' : 'Turn on the lights'}>
+    <Tippy content={theme === 0 ? 'Turn off the lights' : 'Turn on the lights'} touch={false}>
       <button onClick={handleClick} className="text-2xl p-4">
         <LuSun className={clsx(theme === 0 || 'hidden')} />
         <LuMoon className={clsx(theme === 1 || 'hidden')} />
