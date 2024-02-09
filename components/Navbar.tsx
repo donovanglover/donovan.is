@@ -10,7 +10,7 @@ export default function Navbar (): React.ReactElement {
           <NavLink href="/" title={meta.title} className="font-bold" />
         </ul>
         <ul className="flex">
-          <NavLink href="/blog" title="Blog" />
+          <NavLink href="/" title="Home" />
           <NavLink href="/projects" title="Projects" />
           <NavLink href="/about" title="About" />
           <li><ChangeTheme /></li>
