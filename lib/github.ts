@@ -8,9 +8,6 @@ export interface Project {
   pushed: string
   stars: number
   language: string
-  license: string
-  tags: string[]
-  website: string
 }
 
 export default async function getProjects (): Promise<Project[]> {
@@ -25,7 +22,11 @@ export default async function getProjects (): Promise<Project[]> {
     const data = await api.json()
 
     data.forEach((repo: any) => {
-      if (repo.fork === true || repo.license === null) {
+      if (repo.fork === true) {
+        return
+      }
+
+      if (repo.language !== 'Nix' && repo.language !== 'Rust') {
         return
       }
 
@@ -38,10 +39,7 @@ export default async function getProjects (): Promise<Project[]> {
         updated: new Date(repo.updated_at as string).getFullYear(),
         pushed: repo.pushed_at,
         stars: repo.stargazers_count,
-        language: repo.language,
-        license: repo.license,
-        tags: repo.topics,
-        website: repo.homepage
+        language: repo.language
       })
     })
   }

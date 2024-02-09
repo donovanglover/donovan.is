@@ -1,6 +1,6 @@
 import { meta } from '@/lib/metadata'
 import { Feed } from 'feed'
-import getPosts from '@/lib/posts'
+import { getPosts } from '@/lib/posts'
 
 export default async function getFeed (): Promise<Feed> {
   const feed = new Feed({
