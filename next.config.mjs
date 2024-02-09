@@ -14,7 +14,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['mdx', 'ts', 'tsx'],
 
   typescript: {
     ignoreBuildErrors: true,
