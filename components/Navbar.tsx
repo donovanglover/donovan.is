@@ -7,16 +7,17 @@ export default function Navbar (): React.ReactElement {
     <header className="container mx-auto">
       <nav className="flex justify-between">
         <ul className="flex">
-          <NavLink href="/" title={meta.title} className="font-bold" />
+          <NavLink href="/" title={meta.title} className="font-bold" active={false} />
         </ul>
         <ul className="flex">
           <NavLink href="/" title="Home" />
+          <NavLink href="/work" title="Work" />
           <NavLink href="/projects" title="Projects" />
           <NavLink href="/about" title="About" />
           <li><ChangeTheme /></li>
         </ul>
       </nav>
-      <hr className="text-black-200" />
+      <hr />
     </header>
   )
 }
