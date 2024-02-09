@@ -16,16 +16,13 @@ export interface Frontmatter {
   date: string
 }
 
-export default async function getPosts (): Promise<Post[]> {
+async function getMarkdownContentFromPath (path: string): Promise<Post[]> {
   const posts: Post[] = []
-  const path = './app/(content)/(writing)'
-
   const files = await fs.readdir(path)
 
   for (const file of files) {
     const fileContent = await fs.readFile(`${path}/${file}/page.mdx`, 'utf-8')
-    const mtr = matter(fileContent)
-    const frontmatter = mtr.data as Frontmatter
+    const frontmatter = matter(fileContent).data as Frontmatter
     const date = new Date(frontmatter.date)
 
     if (isNaN(date.getTime())) {
@@ -42,4 +39,12 @@ export default async function getPosts (): Promise<Post[]> {
   }
 
   return posts
+}
+
+export async function getPosts (): Promise<Post[]> {
+  return await getMarkdownContentFromPath('./app/(content)/(writing)')
+}
+
+export async function getProjects (): Promise<Post[]> {
+  return await getMarkdownContentFromPath('./app/(content)/(projects)')
 }
