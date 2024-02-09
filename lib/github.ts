@@ -10,6 +10,15 @@ export interface Project {
   language: string
 }
 
+const whitelist = [
+  'nix-config',
+  'hyprdim',
+  'hyprnome',
+  'sakaya',
+  'jd',
+  'thud'
+]
+
 export default async function getProjects (): Promise<Project[]> {
   const projects: Project[] = []
   const api = await fetch('https://api.github.com/users/donovanglover/repos', {
@@ -26,7 +35,7 @@ export default async function getProjects (): Promise<Project[]> {
         return
       }
 
-      if (repo.language !== 'Nix' && repo.language !== 'Rust') {
+      if (!whitelist.includes(repo.name as string)) {
         return
       }
 
