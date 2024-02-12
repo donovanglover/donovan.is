@@ -4,7 +4,6 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { LuSun, LuMoon } from 'react-icons/lu'
 import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
 
 export default function ChangeTheme (): React.ReactElement {
   const [theme, setTheme] = useState(0)

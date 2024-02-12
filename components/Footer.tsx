@@ -4,7 +4,6 @@ import { meta } from '@/lib/metadata'
 import { FaGithub, FaLinkedin, FaMastodon } from 'react-icons/fa'
 
 import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
 
 export default function Footer (): React.ReactElement {
   return (
