@@ -42,7 +42,11 @@ const tailwindConfig = {
 
   plugins: [
     require('@tailwindcss/typography')
-  ]
+  ],
+
+  future: {
+    hoverOnlyWhenSupported: true
+  }
 } satisfies Config
 
 export default tailwindConfig
