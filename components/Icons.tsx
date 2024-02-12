@@ -1,5 +1,5 @@
 import { FaRust, FaDocker, FaReact, FaNodeJs } from 'react-icons/fa6'
-import { SiNixos, SiNextdotjs } from 'react-icons/si'
+import { SiNixos, SiNextdotjs, SiTypescript } from 'react-icons/si'
 import { FaGithub, FaMastodon } from 'react-icons/fa'
 import { meta } from '@/lib/metadata'
 
@@ -86,6 +86,17 @@ export function Nix (): React.ReactElement {
       <a href='https://nixos.org/'>
         Nix
         <SiNixos className="inline-block ml-1.5" />
+      </a>
+    </span>
+  )
+}
+
+export function TypeScript (): React.ReactElement {
+  return (
+    <span className="inline-block">
+      <a href='https://www.typescriptlang.org/'>
+        TypeScript
+        <SiTypescript className="inline-block ml-1.5" />
       </a>
     </span>
   )
