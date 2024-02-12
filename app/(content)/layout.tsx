@@ -1,13 +1,13 @@
-export interface NotesLayoutProps {
+export interface ContentLayoutProps {
   children: React.ReactNode
 }
 
-export default function NotesLayout ({ children }: NotesLayoutProps): React.ReactElement {
+export default function ContentLayout ({ children }: ContentLayoutProps): React.ReactElement {
   return (
     <main>
-      <div className="prose dark:prose-invert p-4 mx-auto prose-lg xl:prose-xl font-serif prose-p:transition-colors prose-headings:transition-colors prose-a:transition-colors">
+      <article className="prose dark:prose-invert py-4 mx-auto prose-lg xl:prose-xl font-serif prose-p:transition-colors prose-headings:transition-colors prose-a:transition-colors prose-headings:font-sans">
         {children}
-      </div>
+      </article>
     </main>
   )
 }
