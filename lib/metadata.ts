@@ -1,5 +1,3 @@
-import { type Metadata } from 'next'
-
 /** Global const to keep track of site meta */
 export const meta: {
   /** Title of the website used in the <title> tag on all pages */
@@ -29,19 +27,4 @@ export const meta: {
     github: 'https://github.com/donovanglover',
     linkedin: 'https://linkedin.com/in/donovanglover'
   }
-}
-
-/** Site metadata used for root layout */
-export const siteMetadata: Metadata = {
-  title: {
-    template: `%s | ${meta.title}`,
-    default: meta.title
-  },
-  description: meta.description,
-  twitter: {
-    card: 'summary_large_image',
-    title: meta.title,
-    description: meta.description
-  },
-  metadataBase: new URL(meta.url)
 }

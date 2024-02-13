@@ -1,13 +1,25 @@
+import '@/styles/tailwind.css'
 import '@/styles/main.css'
-import '@/styles/generated.css'
 import clsx from 'clsx'
 import { mapleMono } from '@/lib/fonts'
-import { meta, siteMetadata } from '@/lib/metadata'
+import { meta } from '@/lib/metadata'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import HolyLoader from 'holy-loader'
 
-export const metadata = siteMetadata
+export const metadata = {
+  title: {
+    template: `%s | ${meta.title}`,
+    default: meta.title
+  },
+  description: meta.description,
+  twitter: {
+    card: 'summary_large_image',
+    title: meta.title,
+    description: meta.description
+  },
+  metadataBase: new URL(meta.url)
+}
 
 export interface RootLayoutProps {
   children: React.ReactNode

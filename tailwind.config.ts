@@ -3,7 +3,8 @@ import type { Config } from 'tailwindcss'
 const tailwindConfig = {
   content: [
     './app/**/*.{tsx,mdx}',
-    './components/**/*.tsx'
+    './components/**/*.tsx',
+    './*.tsx'
   ],
 
   darkMode: 'class',
