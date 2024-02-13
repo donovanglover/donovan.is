@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="text-blue-400">
+    <main className="text-pink-300">
       hello
       world?
     </main>
