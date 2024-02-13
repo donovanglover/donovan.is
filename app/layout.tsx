@@ -1,4 +1,3 @@
-import '@/styles/tailwind.css'
 import '@/styles/main.css'
 import clsx from 'clsx'
 import { mapleMono } from '@/lib/fonts'
