@@ -1,4 +1,4 @@
-import getProjects from '@/lib/github'
+import getGitHub from '@/lib/github'
 import { FaRegStar } from 'react-icons/fa'
 import { type Metadata } from 'next'
 import Card from '@/components/Card'
@@ -19,7 +19,7 @@ const images: Record<string, StaticImageData> = {
 }
 
 export default async function ProjectsPage (): Promise<React.ReactElement> {
-  const projects = await getProjects()
+  const projects = await getGitHub()
 
   return (
     <main className="font-serif">

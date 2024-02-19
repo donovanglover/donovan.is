@@ -1,4 +1,7 @@
-@import 'tailwind.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'fonts.css';
 
 ::selection {
