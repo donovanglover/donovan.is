@@ -20,7 +20,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
-  swcMinify: true
+  swcMinify: true,
+
+  experimental: {
+    mdxRs: true
+  }
 }
 
 /** @type {import('rehype-pretty-code').Options} */
