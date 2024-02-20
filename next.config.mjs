@@ -21,6 +21,10 @@ const nextConfig = {
   },
 
   swcMinify: true,
+
+  experimental: {
+    mdxRs: true
+  }
 }
 
 /** @type {import('rehype-pretty-code').Options} */
