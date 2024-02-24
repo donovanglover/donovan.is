@@ -2,7 +2,7 @@ import { meta } from '@/lib/metadata'
 import { Feed } from 'feed'
 import { getPosts } from '@/lib/posts'
 
-export default async function getFeed (): Promise<Feed> {
+export async function getFeed (): Promise<Feed> {
   const feed = new Feed({
     title: meta.title,
     description: meta.description,

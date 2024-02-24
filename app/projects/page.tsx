@@ -1,4 +1,4 @@
-import getGitHub from '@/lib/github'
+import { getGitHub } from '@/lib/github'
 import { FaRegStar } from 'react-icons/fa'
 import { type Metadata } from 'next'
 import Card from '@/components/Card'

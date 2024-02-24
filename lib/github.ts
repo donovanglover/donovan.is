@@ -19,7 +19,7 @@ const whitelist = [
   'thud'
 ]
 
-export default async function getGitHub (): Promise<Project[]> {
+export async function getGitHub (): Promise<Project[]> {
   const projects: Project[] = []
   const api = await fetch('https://api.github.com/users/donovanglover/repos', {
     next: {
