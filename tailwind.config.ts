@@ -1,14 +1,10 @@
 import type { Config } from 'tailwindcss'
 
-const tailwindConfig = {
+const tailwindConfig: Config = {
   content: [
     './app/**/*.{ts,tsx,mdx}',
-    './components/**/*.{ts,tsx}',
-    './lib/**/*.{ts,tsx}',
-    './*.tsx'
+    './lib/**/*.{ts,tsx}'
   ],
-
-  darkMode: 'class',
 
   theme: {
     extend: {
@@ -49,6 +45,6 @@ const tailwindConfig = {
   future: {
     hoverOnlyWhenSupported: true
   }
-} satisfies Config
+}
 
 export default tailwindConfig
