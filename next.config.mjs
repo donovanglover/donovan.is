@@ -16,10 +16,6 @@ const nextConfig = {
 
   pageExtensions: ['mdx', 'ts', 'tsx'],
 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
   swcMinify: true
 }
 
