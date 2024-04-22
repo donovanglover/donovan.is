@@ -29,7 +29,7 @@ export default function RootLayout ({ children }: RootLayoutProps): React.ReactE
     <html lang={meta.lang} className={clsx(mapleMono.variable, 'base16-atelier-forest-light')}>
       <body className="flex h-screen flex-col text-pretty bg-100 text-700 transition-colors duration-500 ease-in-out">
         <Navbar />
-        <HolyLoader />
+        <HolyLoader color='rgb(var(--color-red))' height={2} />
         <div className="container mx-auto grow px-4 py-8">
           {children}
         </div>
