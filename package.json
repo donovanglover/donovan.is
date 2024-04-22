@@ -13,7 +13,7 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-12-18 --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@donovanglover/base16-tailwind": "npm:@jsr/donovanglover__base16-tailwind@^0.1.1",
+    "@donovanglover/base16-tailwind": "npm:@jsr/donovanglover__base16-tailwind@^0.1.2",
     "@fontsource-variable/aleo": "^5.0.5",
     "@fontsource-variable/noto-sans-jp": "^5.0.19",
     "@mdx-js/loader": "^3.0.1",
