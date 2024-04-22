@@ -16,7 +16,7 @@ export default function NavLink ({ href, title, className, active = true }: NavL
 
   return (
     <li className={clsx('flex', className)}>
-      <Link href={href} className={clsx('p-4 hover:text-blue-300', active && pathname === href && 'text-red-800')}>{title}</Link>
+      <Link href={href} className={clsx('hover:text-blue-300 p-4', active && pathname === href && 'text-red-800')}>{title}</Link>
     </li>
   )
 }

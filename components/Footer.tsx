@@ -1,13 +1,12 @@
 'use client'
 
-import { meta } from '@/lib/metadata'
-import { FaGithub, FaLinkedin, FaMastodon } from 'react-icons/fa'
-
 import Tippy from '@tippyjs/react'
+import { FaGithub, FaLinkedin, FaMastodon } from 'react-icons/fa'
+import { meta } from '@/lib/metadata'
 
 export default function Footer (): React.ReactElement {
   return (
-    <footer className="container mx-auto p-4 my-4">
+    <footer className="container mx-auto my-4 p-4">
       <nav className="flex justify-center">
         <ul className="flex text-4xl">
           <li className="flex">
@@ -27,7 +26,7 @@ export default function Footer (): React.ReactElement {
           </li>
         </ul>
       </nav>
-      <p className="text-center m-2">&copy; 2024 Donovan Glover &middot; <a href='https://github.com/donovanglover/donovan.is'>View source on GitHub</a></p>
+      <p className="m-2 text-center">&copy; 2024 Donovan Glover &middot; <a href='https://github.com/donovanglover/donovan.is'>View source on GitHub</a></p>
     </footer>
   )
 }

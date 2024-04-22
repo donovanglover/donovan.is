@@ -1,5 +1,5 @@
-import { meta } from '@/lib/metadata'
 import { Feed } from 'feed'
+import { meta } from '@/lib/metadata'
 import { getPosts } from '@/lib/posts'
 
 export async function getFeed (): Promise<Feed> {
