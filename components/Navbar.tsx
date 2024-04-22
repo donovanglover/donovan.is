@@ -15,7 +15,6 @@ export default function Navbar (): React.ReactElement {
           <li><ChangeTheme /></li>
         </ul>
       </nav>
-      <hr />
     </header>
   )
 }
