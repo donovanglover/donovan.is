@@ -1,9 +1,6 @@
 import { type Metadata } from 'next'
-import Image, { type StaticImageData } from 'next/image'
 import { FaRegStar } from 'react-icons/fa'
 import { SiNixos, SiReact, SiRust, SiTypescript } from 'react-icons/si'
-import nixConfig from '@/app/(content)/(projects)/nix-config/nix-config-with-pepper.jpg'
-import thud from '@/app/(content)/(projects)/thud/thud.jpg'
 import Card from '@/components/Card'
 import { getGitHub } from '@/lib/github'
 
@@ -11,11 +8,6 @@ export const runtime = 'edge'
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'Work I\'ve done.'
-}
-
-const images: Record<string, StaticImageData> = {
-  thud,
-  'nix-config': nixConfig
 }
 
 export default async function ProjectsPage (): Promise<React.ReactElement> {
@@ -29,7 +21,6 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
         {projects.map(project => {
           return (
             <Card key={project.id} href={`/${project.name}`}>
-              {project.name in images && <Image src={images[project.name]} alt={project.name} />}
               <div className="px-4 py-6">
                 <h3 className="text-2xl font-bold">
                   {project.name}
