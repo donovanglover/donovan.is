@@ -6,7 +6,7 @@ export default async function HomePage (): Promise<React.ReactElement> {
   const projects = await getProjects()
 
   return (
-    <main className="container prose mx-auto dark:prose-invert">
+    <main className="container prose mx-auto">
       <h2 className="font-serif text-3xl">Writing</h2>
       {posts.map(post => {
         return (
