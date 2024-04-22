@@ -8,6 +8,8 @@ const tailwindConfig: Config = {
     './*.tsx'
   ],
 
+  darkMode: 'selector',
+
   theme: {
     extend: {
       typography: ({ theme }: { theme: (tailwindClass: string) => string }) => ({
