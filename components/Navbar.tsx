@@ -4,7 +4,7 @@ import ChangeTheme from './client/ChangeTheme'
 
 export default function Navbar (): React.ReactElement {
   return (
-    <header className="container mx-auto">
+    <header className="mx-auto max-w-xl">
       <nav className="flex justify-between">
         <NavLink href="/" title={meta.title} className="flex font-bold" active={false} />
         <ul className="flex">
