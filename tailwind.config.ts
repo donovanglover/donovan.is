@@ -1,3 +1,5 @@
+import { base16Tailwind } from '@donovanglover/base16-tailwind'
+import typographyPlugin from '@tailwindcss/typography'
 import type { Config } from 'tailwindcss'
 
 const tailwindConfig: Config = {
@@ -12,10 +14,9 @@ const tailwindConfig: Config = {
 
   theme: {
     extend: {
-      typography: ({ theme }: { theme: (tailwindClass: string) => string }) => ({
+      typography: {
         DEFAULT: {
           css: {
-            '--tw-prose-links': theme('colors.black'),
             code: {
               'border-radius': '0.25rem'
             },
@@ -32,7 +33,7 @@ const tailwindConfig: Config = {
             }
           }
         }
-      }),
+      },
 
       fontFamily: {
         sans: ['var(--font-sans)'],
@@ -43,7 +44,13 @@ const tailwindConfig: Config = {
   },
 
   plugins: [
-    require('@tailwindcss/typography')
+    typographyPlugin,
+
+    base16Tailwind({
+      system: 'base24',
+      invert: true,
+      withTypography: true
+    })
   ],
 
   future: {
