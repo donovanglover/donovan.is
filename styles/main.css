@@ -5,7 +5,7 @@
 @import 'fonts.css';
 
 ::selection {
-  background: theme('colors.red')33;
+  background: rgb(var(--color-red) / 0.5);
 }
 
 pre ::selection {
@@ -14,7 +14,7 @@ pre ::selection {
 
 html {
   overflow-y: scroll;
-  scrollbar-color: theme('colors.red') #222;
+  scrollbar-color: rgb(var(--color-red)) #222;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +28,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: theme('colors.red');
+  background: rgb(var(--color-red));
   border-radius: 20px;
 }
 
