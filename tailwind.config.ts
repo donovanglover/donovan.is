@@ -17,6 +17,7 @@ const tailwindConfig: Config = {
       typography: {
         DEFAULT: {
           css: {
+            '--tw-prose-links': 'rgb(var(--color-red))',
             code: {
               'border-radius': '0.25rem'
             },
