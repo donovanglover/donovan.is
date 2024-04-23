@@ -8,7 +8,6 @@ export default function Navbar (): React.ReactElement {
       <nav className="flex justify-between">
         <NavLink href="/" title={meta.title} className="flex font-bold" active={false} />
         <ul className="flex">
-          <NavLink href="/" title="Home" />
           <NavLink href="/work" title="Work" />
           <NavLink href="/projects" title="Projects" />
           <NavLink href="/about" title="About" />
