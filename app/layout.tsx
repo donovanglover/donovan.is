@@ -1,6 +1,7 @@
 import '@/app/globals.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
+import BackToTop from '@/components/client/BackToTop'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { mapleMono } from '@/lib/fonts'
@@ -34,6 +35,7 @@ export default function RootLayout ({ children }: RootLayoutProps): React.ReactE
           {children}
         </div>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   )
