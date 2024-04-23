@@ -29,8 +29,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> {
   prefixCls?: string
-  /** Scroll bar area @default document.documentElement */
-  element?: HTMLElement | null
   /** Whether to use smooth scrolling* @default true */
   smooth?: boolean
   /** Classname to add/override styling (note, !important for overrides might be needed) */
@@ -79,13 +77,10 @@ const childStyle: React.CSSProperties = {
   fontSize: 12
 }
 
-const documentElement = document.documentElement
-
 export default function BackToTop (props: BackToTopProps = {}): React.ReactElement {
   const {
     className,
     prefixCls = 'w-back-to-up',
-    element = documentElement,
     top = 120,
     size = 35,
     strokeWidth = 3,
@@ -101,7 +96,7 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
     {},
     warpperStyle,
     {
-      position: element === documentElement ? 'fixed' : 'sticky'
+      position: 'fixed'
     },
     others.style,
     {
@@ -118,7 +113,7 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
 
   useEffect(() => {
     const handleScroll = (): void => {
-      const { clientHeight, scrollHeight, scrollTop } = element ?? documentElement
+      const { clientHeight, scrollHeight, scrollTop } = document.documentElement
       const percentage = scrollTop / (scrollHeight - clientHeight)
 
       setProgress(dasharray - dasharray * percentage ?? 0)
@@ -128,7 +123,7 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
       }
     }
 
-    const scrollElement = element === documentElement ? document : element
+    const scrollElement = document
 
     if (scrollElement !== null) {
       scrollElement.addEventListener('scroll', handleScroll, { passive: true })
@@ -139,10 +134,10 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
         scrollElement.removeEventListener('scroll', handleScroll)
       }
     }
-  }, [element, dasharray, top])
+  }, [dasharray, top])
 
   const handleClick = (): void => {
-    element?.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' })
+    document.documentElement.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' })
   }
 
   return (
