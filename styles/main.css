@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'fonts.css';
+@import '@fontsource-variable/noto-sans-jp';
+@import '@fontsource-variable/aleo';
 
 ::selection {
   background: rgb(var(--color-red) / 0.5);

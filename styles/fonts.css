@@ -1,7 +1,0 @@
-@import '@fontsource-variable/noto-sans-jp';
-@import '@fontsource-variable/aleo';
-
-:root {
-  --font-sans: 'Noto Sans JP Variable', 'Noto Sans CJK JP', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: 'Aleo Variable', 'Aleo', 'Noto Sans CJK JP', serif;
-}

@@ -13,6 +13,12 @@ const tailwindConfig: Config = {
   darkMode: 'selector',
 
   theme: {
+    fontFamily: {
+      sans: "'Noto Sans JP Variable', 'Noto Sans CJK JP', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      serif: "'Aleo Variable', 'Aleo', 'Noto Sans CJK JP', serif",
+      mono: 'var(--font-mono)'
+    },
+
     extend: {
       typography: {
         DEFAULT: {
@@ -34,12 +40,6 @@ const tailwindConfig: Config = {
             }
           }
         }
-      },
-
-      fontFamily: {
-        sans: ['var(--font-sans)'],
-        serif: ['var(--font-serif)'],
-        mono: ['var(--font-mono)']
       }
     }
   },
