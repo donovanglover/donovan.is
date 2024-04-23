@@ -28,13 +28,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> {
-  prefixCls?: string
   /** Whether to use smooth scrolling* @default true */
   smooth?: boolean
-  /** Classname to add/override styling (note, !important for overrides might be needed) */
-  className?: string
-  /** Object to add/override styling */
-  style?: React.CSSProperties
   /** Height after page scroll to be visible @default 120 */
   top?: number
   /** The Button width & height @default 35 */
@@ -45,42 +40,12 @@ export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> 
   hideProgress?: boolean
 }
 
-const warpperStyle: React.CSSProperties = {
-  position: 'sticky',
-  bottom: 15,
-  right: 15,
-  visibility: 'visible',
-  opacity: 0,
-  transition: 'visibility 0.3s linear 0s, opacity 0.3s linear 0s',
-  cursor: 'pointer',
-  userSelect: 'none'
-}
-
-const svgStyle: React.CSSProperties = {
-  display: 'block',
-  transform: 'rotate(-90deg)'
-}
-
 const circleStyle: React.CSSProperties = {
   transition: 'stroke-dashoffset 0.3s linear 0s'
 }
 
-const childStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: 0,
-  display: 'flex',
-  height: '100%',
-  width: '100%',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: '#fff',
-  fontSize: 12
-}
-
 export default function BackToTop (props: BackToTopProps = {}): React.ReactElement {
   const {
-    className,
-    prefixCls = 'w-back-to-up',
     top = 120,
     size = 35,
     strokeWidth = 3,
@@ -91,20 +56,6 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
   } = props
 
   const $dom = useRef<HTMLDivElement>(null)
-  const cls = [className, prefixCls].filter(Boolean).join(' ')
-  const style: React.CSSProperties = Object.assign(
-    {},
-    warpperStyle,
-    {
-      position: 'fixed'
-    },
-    others.style,
-    {
-      width: size,
-      height: size,
-      opacity: top === 0 ? 1 : 0
-    }
-  )
 
   const center = useMemo(() => size / 2, [size])
   const radius = useMemo(() => size / 2 - strokeWidth / 2, [size, strokeWidth])
@@ -141,9 +92,9 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
   }
 
   return (
-    <div className={cls} ref={$dom} {...others} onClick={handleClick} style={style}>
+    <div className="visible fixed bottom-6 right-6 cursor-pointer select-none opacity-80 transition-all" ref={$dom} {...others} onClick={handleClick}>
       {!hideProgress && (
-        <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" style={svgStyle}>
+        <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90">
           <circle
             fill="rgb(0 0 0 / 75%)"
             stroke="rgb(200 200 200 / 85%)"
@@ -165,7 +116,7 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
           />
         </svg>
       )}
-      {children !== null && <div style={childStyle}>{children}</div>}
+      {children !== null && <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-100">{children}</div>}
     </div>
   )
 }
