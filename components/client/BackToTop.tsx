@@ -36,25 +36,9 @@ export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> 
   size?: number
   /** the width of the progress bar */
   strokeWidth?: number
-  /** hide progress icon */
-  hideProgress?: boolean
 }
 
-const circleStyle: React.CSSProperties = {
-  transition: 'stroke-dashoffset 0.3s linear 0s'
-}
-
-export default function BackToTop (props: BackToTopProps = {}): React.ReactElement {
-  const {
-    top = 120,
-    size = 35,
-    strokeWidth = 3,
-    smooth = true,
-    hideProgress = false,
-    children,
-    ...others
-  } = props
-
+export default function BackToTop ({ top = 120, size = 64, strokeWidth = 6, smooth = true }: BackToTopProps): React.ReactElement {
   const $dom = useRef<HTMLDivElement>(null)
 
   const center = useMemo(() => size / 2, [size])
@@ -74,16 +58,10 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
       }
     }
 
-    const scrollElement = document
-
-    if (scrollElement !== null) {
-      scrollElement.addEventListener('scroll', handleScroll, { passive: true })
-    }
+    document.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
-      if (scrollElement !== null) {
-        scrollElement.removeEventListener('scroll', handleScroll)
-      }
+      document.removeEventListener('scroll', handleScroll)
     }
   }, [dasharray, top])
 
@@ -92,31 +70,12 @@ export default function BackToTop (props: BackToTopProps = {}): React.ReactEleme
   }
 
   return (
-    <div className="visible fixed bottom-6 right-6 cursor-pointer select-none opacity-80 transition-all" ref={$dom} {...others} onClick={handleClick}>
-      {!hideProgress && (
-        <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90">
-          <circle
-            fill="rgb(0 0 0 / 75%)"
-            stroke="rgb(200 200 200 / 85%)"
-            strokeWidth={strokeWidth}
-            r={radius}
-            cx={center}
-            cy={center}
-          />
-          <circle
-            fill="none"
-            stroke="rgb(0 0 0 / 50%)"
-            strokeWidth={strokeWidth}
-            r={radius}
-            cx={center}
-            cy={center}
-            strokeDasharray={dasharray}
-            strokeDashoffset={progress ?? 0}
-            style={circleStyle}
-          />
-        </svg>
-      )}
-      {children !== null && <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-100">{children}</div>}
+    <div className="visible fixed bottom-6 right-6 cursor-pointer select-none opacity-0 transition-all" ref={$dom} onClick={handleClick}>
+      <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90">
+        <circle className="stroke-purple" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} />
+        <circle className="stroke-orange" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} strokeDasharray={dasharray} strokeDashoffset={progress ?? 0} />
+      </svg>
+      <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-100">&uarr;</div>
     </div>
   )
 }
