@@ -5,6 +5,10 @@
 @import '@fontsource-variable/noto-sans-jp';
 @import '@fontsource-variable/aleo';
 
+a {
+  text-underline-position: under;
+}
+
 ::selection {
   background: rgb(var(--color-red) / 0.5);
 }

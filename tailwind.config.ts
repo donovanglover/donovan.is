@@ -34,9 +34,6 @@ const tailwindConfig: Config = {
             'code::after': {
               content: '""',
               'padding-right': '0.25rem'
-            },
-            a: {
-              'text-underline-position': 'under'
             }
           }
         }
