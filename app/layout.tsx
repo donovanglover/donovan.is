@@ -1,4 +1,4 @@
-import '@/styles/main.css'
+import '@/app/globals.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
 import Footer from '@/components/Footer'
