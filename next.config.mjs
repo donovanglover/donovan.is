@@ -3,10 +3,10 @@ import remarkToc from 'remark-toc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeMdxImportMedia from 'rehype-mdx-import-media'
 import rehypeShiki from '@shikijs/rehype'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
-import remarkMdxImages from 'remark-mdx-images'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -30,12 +30,12 @@ const withMDX = createMDX({
       remarkGfm,
       remarkToc,
       remarkFrontmatter,
-      remarkMdxImages,
       [remarkMdxFrontmatter, { name: 'metadata' }]
     ],
 
     rehypePlugins: [
       rehypeSlug,
+      rehypeMdxImportMedia,
       rehypeAutolinkHeadings,
       [rehypeShiki, shikiOptions]
     ],
