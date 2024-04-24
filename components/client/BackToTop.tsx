@@ -66,11 +66,11 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 6, smoo
 
   return (
     <div className="visible fixed bottom-6 right-6 cursor-pointer select-none opacity-0 transition-all" ref={$dom} onClick={handleClick}>
-      <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90">
-        <circle className="stroke-purple" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} />
-        <circle className="stroke-orange" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} strokeDasharray={dasharray} strokeDashoffset={progress ?? 0} />
+      <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90 fill-200">
+        <circle className="stroke-300" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} />
+        <circle className="stroke-red" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} strokeDasharray={dasharray} strokeDashoffset={progress ?? 0} />
       </svg>
-      <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-100">&uarr;</div>
+      <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-800">&uarr;</div>
     </div>
   )
 }
