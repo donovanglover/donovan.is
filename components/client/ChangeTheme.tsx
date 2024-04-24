@@ -266,6 +266,18 @@ const schemes = [
   'base16-zenburn'
 ]
 
+function makeTitle (slug: string): string {
+  const words = slug.split('-')
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i]
+
+    words[i] = word.charAt(0).toUpperCase() + word.slice(1)
+  }
+
+  return words.join(' ')
+}
+
 export default function ChangeTheme (): React.ReactElement {
   const [currentScheme, setCurrentScheme] = useState('base16-atelier-forest-light')
 
@@ -278,7 +290,7 @@ export default function ChangeTheme (): React.ReactElement {
     <select id="base16Scheme" value={currentScheme} onChange={changeScheme}>
       <option value="">Change Scheme</option>
       {schemes.map(scheme => {
-        return <option key={scheme} value={scheme}>{scheme}</option>
+        return <option key={scheme} value={scheme}>{makeTitle(scheme.replace('base16-', ''))}</option>
       })}
     </select>
   )
