@@ -4,9 +4,10 @@ import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeMdxImportMedia from 'rehype-mdx-import-media'
-import rehypeShiki from '@shikijs/rehype'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+import { bundledLanguages, createCssVariablesTheme, getHighlighter } from 'shiki'
+import rehypeShikiFromHighlighter from '@shikijs/rehype/core'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,11 +19,6 @@ const nextConfig = {
 
   swcMinify: true
 }
-
-/** @type {import('@shikijs/rehype').RehypeShikiOptions} */
-const shikiOptions = {
-  theme: "monokai"
-};
 
 const withMDX = createMDX({
   options: {
@@ -37,7 +33,23 @@ const withMDX = createMDX({
       rehypeSlug,
       rehypeMdxImportMedia,
       rehypeAutolinkHeadings,
-      [rehypeShiki, shikiOptions]
+      [rehypeShikiFromHighlighter,
+        await getHighlighter({
+          langs: Object.keys(bundledLanguages),
+
+          themes: [
+            createCssVariablesTheme({
+              name: 'shiki-base16',
+              variablePrefix: '--shiki-',
+              variableDefaults: {},
+              fontStyle: true
+            })
+          ]
+        }),
+        {
+          theme: 'shiki-base16'
+        }
+      ]
     ],
   },
 })
