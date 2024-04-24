@@ -34,7 +34,7 @@ export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> 
   strokeWidth?: number
 }
 
-export default function BackToTop ({ top = 120, size = 64, strokeWidth = 6, smooth = true }: BackToTopProps): React.ReactElement {
+export default function BackToTop ({ top = 120, size = 64, strokeWidth = 3, smooth = true }: BackToTopProps): React.ReactElement {
   const $dom = useRef<HTMLDivElement>(null)
   const center = useMemo(() => size / 2, [size])
   const radius = useMemo(() => size / 2 - strokeWidth / 2, [size, strokeWidth])
