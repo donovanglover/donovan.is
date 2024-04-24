@@ -27,6 +27,9 @@ const tailwindConfig: Config = {
             code: {
               'border-radius': '0.25rem'
             },
+            pre: {
+              border: '2px solid rgb(var(--color-400))'
+            },
             'code::before': {
               content: '""',
               'padding-left': '0.25rem'
