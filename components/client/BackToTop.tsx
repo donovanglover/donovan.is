@@ -71,7 +71,7 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 3, smoo
         <circle className="stroke-300" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} />
         <circle className="stroke-red" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} strokeDasharray={dasharray} strokeDashoffset={progress ?? 0} />
       </svg>
-      <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-800">&uarr;</div>
+      <div className="absolute top-0 flex size-full items-center justify-center text-2xl text-700">&uarr;</div>
     </div>
   )
 }

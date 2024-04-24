@@ -66,7 +66,7 @@ img + em {
 }
 
 :root {
-  --shiki-foreground: rgb(var(--color-800));
+  --shiki-foreground: rgb(var(--color-700));
   --shiki-background: rgb(var(--color-100));
   --shiki-token-constant: rgb(var(--color-red));
   --shiki-token-string: rgb(var(--color-300));
@@ -75,7 +75,7 @@ img + em {
   --shiki-token-parameter: rgb(var(--color-yellow));
   --shiki-token-function: rgb(var(--color-blue));
   --shiki-token-string-expression: rgb(var(--color-green));
-  --shiki-token-punctuation: rgb(var(--color-800));
+  --shiki-token-punctuation: rgb(var(--color-700));
   --shiki-token-link: rgb(var(--color-purple));
 }
 
