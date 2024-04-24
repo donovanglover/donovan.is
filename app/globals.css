@@ -5,80 +5,8 @@
 @import '@fontsource-variable/noto-sans-jp';
 @import '@fontsource-variable/aleo';
 
-a {
-  text-underline-position: under;
-}
-
-::selection {
-  background: rgb(var(--color-red) / 0.25);
-}
-
-pre ::selection {
-  background: rgb(var(--color-red) / 0.25);
-}
-
-html {
-  overflow-y: scroll;
-  scrollbar-color: rgb(var(--color-300)) rgb(var(--color-100));
-  scroll-behavior: smooth;
-}
-
-main {
-  animation-fill-mode: forwards;
-  animation-name: fade-in-up;
-  animation-duration: 0.5s;
-  will-change: transform, opacity;
-}
-
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 2rem, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateZ(0);
-  }
-}
-
-p:has(> img),
-figure:has(> pre) {
-  margin: 0 calc(50% - 45vw);
-}
-
-@media screen and (min-width: 1280px) {
-  p:has(> img),
-  figure:has(> pre) {
-    margin: 0 calc(50% - 520px)
-  }
-}
-
-p:has(> img + em) {
-  text-align: center;
-}
-
-img + em {
-  display: block;
-  margin-top: -1.5rem;
-  font-style: normal;
-  font-size: 90%;
-}
-
-:root {
-  --shiki-foreground: rgb(var(--color-700));
-  --shiki-background: rgb(var(--color-100));
-  --shiki-token-constant: rgb(var(--color-red));
-  --shiki-token-string: rgb(var(--color-500));
-  --shiki-token-comment: rgb(var(--color-500));
-  --shiki-token-keyword: rgb(var(--color-purple));
-  --shiki-token-parameter: rgb(var(--color-yellow));
-  --shiki-token-function: rgb(var(--color-blue));
-  --shiki-token-string-expression: rgb(var(--color-green));
-  --shiki-token-punctuation: rgb(var(--color-700));
-  --shiki-token-link: rgb(var(--color-purple));
-}
-
-.shiki-base16, .shiki-base16 span {
-  @apply transition-colors duration-500;
-}
+@import './_css/fade-animation.css';
+@import './_css/text-selection.css';
+@import './_css/syntax-highlighting.css';
+@import './_css/prose.css';
+@import './_css/scrollbar.css';

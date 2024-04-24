@@ -1,0 +1,17 @@
+:root {
+  --shiki-foreground: rgb(var(--color-700));
+  --shiki-background: rgb(var(--color-100));
+  --shiki-token-constant: rgb(var(--color-red));
+  --shiki-token-string: rgb(var(--color-500));
+  --shiki-token-comment: rgb(var(--color-500));
+  --shiki-token-keyword: rgb(var(--color-purple));
+  --shiki-token-parameter: rgb(var(--color-yellow));
+  --shiki-token-function: rgb(var(--color-blue));
+  --shiki-token-string-expression: rgb(var(--color-green));
+  --shiki-token-punctuation: rgb(var(--color-700));
+  --shiki-token-link: rgb(var(--color-purple));
+}
+
+.shiki-base16, .shiki-base16 span {
+  @apply transition-colors duration-500;
+}

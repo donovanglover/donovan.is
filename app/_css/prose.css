@@ -1,0 +1,31 @@
+.prose {
+  /* Breakout images and code blocks wrapped in <figure> */
+  p:has(> img),
+  figure:has(> pre) {
+    margin: 0 calc(50% - 45vw);
+  }
+
+  @media screen and (min-width: 1280px) {
+    p:has(> img),
+    figure:has(> pre) {
+      margin: 0 calc(50% - 520px)
+    }
+  }
+
+  /* Center-align figcaption-like markdown */
+  p:has(> img + em) {
+    text-align: center;
+  }
+
+  img + em {
+    display: block;
+    margin-top: -1.5rem;
+    font-style: normal;
+    font-size: 90%;
+  }
+
+  /* Underline links without covering the letters */
+  a {
+    text-underline-position: under;
+  }
+}
