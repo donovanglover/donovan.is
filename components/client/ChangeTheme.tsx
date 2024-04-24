@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { meta } from '@/lib/metadata'
 
 const schemes = [
   'base16-3024',
@@ -245,7 +246,7 @@ function makeTitle (slug: string): string {
 }
 
 export default function ChangeTheme (): React.ReactElement {
-  const [currentScheme, setCurrentScheme] = useState('base16-atelier-forest-light')
+  const [currentScheme, setCurrentScheme] = useState(meta.scheme)
 
   function changeScheme (event: React.ChangeEvent<HTMLSelectElement>): void {
     document.documentElement.classList.replace(currentScheme, event.target.value)

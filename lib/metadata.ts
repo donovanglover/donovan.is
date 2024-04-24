@@ -16,6 +16,8 @@ export const meta: {
     github: string
     linkedin: string
   }
+  /** Default color scheme */
+  scheme: string
 } = {
   title: 'Donovan Glover',
   description: 'Software Engineer in Atlanta, GA',
@@ -26,5 +28,6 @@ export const meta: {
     mastodon: 'https://hachyderm.io/@donovanglover',
     github: 'https://github.com/donovanglover',
     linkedin: 'https://linkedin.com/in/donovanglover'
-  }
+  },
+  scheme: 'base16-default-dark'
 }
