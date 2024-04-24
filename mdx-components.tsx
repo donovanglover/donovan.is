@@ -5,9 +5,8 @@ import Link from 'next/link'
 export function useMDXComponents (components: MDXComponents): MDXComponents {
   return {
     a: ({ href, children }) => {
-      if (typeof href !== 'string') {
-        console.error('ERROR: A link in a markdown file is missing a url.')
-        return
+      if (typeof href !== 'string' || href === '') {
+        throw new Error('A link in a markdown file is missing a url. Try rg -F "]()"')
       }
 
       if (href.startsWith('#')) {
@@ -19,8 +18,7 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith('http://')) {
-        console.error(`ERROR: http:// links are disallowed. Change ${href}`)
-        return
+        throw new Error(`http:// links are disallowed. Change ${href}`)
       }
 
       if (href.startsWith('https://')) {
