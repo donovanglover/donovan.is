@@ -2,12 +2,69 @@ import { type Metadata } from 'next'
 import { FaRegStar } from 'react-icons/fa'
 import { SiNixos, SiReact, SiRust, SiTypescript } from 'react-icons/si'
 import Card from '@/components/Card'
-import { getGitHub } from '@/lib/github'
 
 export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'Work I\'ve done.'
+}
+
+interface Project {
+  name: string
+  description: string
+  created: number
+  pushed: number
+  stars: number
+  language: string
+}
+
+const whitelist = [
+  'nix-config',
+  'hyprdim',
+  'hyprnome',
+  'sakaya',
+  'jd',
+  'thud',
+  'base16-tailwind'
+]
+
+async function getGitHub (): Promise<Project[]> {
+  const projects: Project[] = []
+  const api = await fetch('https://api.github.com/users/donovanglover/repos', {
+    next: {
+      revalidate: 3600
+    }
+  })
+
+  if (api.ok) {
+    const data = await api.json()
+
+    data.forEach((repo: any) => {
+      if (repo.fork === true) {
+        return
+      }
+
+      if (!whitelist.includes(repo.name as string)) {
+        return
+      }
+
+      projects.push({
+        name: repo.name,
+        description: repo.description,
+        created: new Date(repo.created_at as string).getFullYear(),
+        pushed: new Date(repo.pushed_at as string).getFullYear(),
+        stars: repo.stargazers_count,
+        language: repo.language
+      })
+    })
+  }
+
+  projects.sort((a, b) => b.stars - a.stars)
+
+  console.log(projects)
+
+  return projects
 }
 
 export default async function ProjectsPage (): Promise<React.ReactElement> {
@@ -15,12 +72,12 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
 
   return (
     <main className="font-serif">
-      <h2 className="pb-4 text-center text-5xl font-extrabold">Projects</h2>
+      <h2 className="pb-4 text-center font-sans text-4xl font-extrabold">Projects</h2>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {projects.map(project => {
           return (
-            <Card key={project.id} href={`/${project.name}`}>
+            <Card key={project.name} href={`/${project.name}`}>
               <div className="px-4 py-6">
                 <h3 className="text-2xl font-bold">
                   {project.name}
@@ -33,11 +90,11 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
                 </h3>
                 <p className="grow pb-2 pt-1">{project.description}</p>
                 <p className="flex justify-between pt-2">
-                  <span>{project.updated === project.created
+                  <span>{project.pushed === project.created
                     ? project.created
-                    : project.updated === 2024
+                    : project.pushed === 2024
                       ? `${project.created}\u2014Now`
-                      : `${project.created}\u2014${project.updated}`}</span>
+                      : `${project.created}\u2014${project.pushed}`}</span>
                   {project.stars >= 5 && <span className="flex items-center"><FaRegStar className="mr-1 inline-block" />{project.stars}</span>}
                 </p>
               </div>
