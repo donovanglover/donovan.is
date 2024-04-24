@@ -10,11 +10,11 @@ a {
 }
 
 ::selection {
-  background: rgb(var(--color-red) / 0.5);
+  background: rgb(var(--color-red) / 0.25);
 }
 
 pre ::selection {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgb(var(--color-red) / 0.25);
 }
 
 html {
