@@ -28,19 +28,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 export interface BackToTopProps extends React.AllHTMLAttributes<HTMLDivElement> {
-  /** Whether to use smooth scrolling* @default true */
   smooth?: boolean
-  /** Height after page scroll to be visible @default 120 */
   top?: number
-  /** The Button width & height @default 35 */
   size?: number
-  /** the width of the progress bar */
   strokeWidth?: number
 }
 
 export default function BackToTop ({ top = 120, size = 64, strokeWidth = 6, smooth = true }: BackToTopProps): React.ReactElement {
   const $dom = useRef<HTMLDivElement>(null)
-
   const center = useMemo(() => size / 2, [size])
   const radius = useMemo(() => size / 2 - strokeWidth / 2, [size, strokeWidth])
   const dasharray = useMemo(() => Math.PI * radius * 2, [radius])
@@ -54,7 +49,7 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 6, smoo
       setProgress(dasharray - dasharray * percentage ?? 0)
 
       if ($dom.current !== null && top > 0) {
-        $dom.current.style.opacity = scrollTop > top ? '1' : '0'
+        $dom.current.classList.toggle('opacity-0', scrollTop <= top)
       }
     }
 
