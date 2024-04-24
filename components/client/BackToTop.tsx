@@ -62,6 +62,7 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 3, smoo
 
   const handleClick = (): void => {
     document.documentElement.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' })
+    window.history.pushState(null, document.title, window.location.pathname + window.location.search)
   }
 
   return (
