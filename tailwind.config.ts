@@ -48,7 +48,6 @@ const tailwindConfig: Config = {
     typographyPlugin,
 
     base16Tailwind({
-      system: 'base24',
       invert: true,
       withTypography: true
     })
