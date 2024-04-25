@@ -1,4 +1,4 @@
-import { getFeed } from '@/lib/feed'
+import { getFeed } from '@/app/(rss)/lib'
 
 export async function GET (): Promise<Response> {
   const feed = await getFeed()
