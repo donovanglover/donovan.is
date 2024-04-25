@@ -1,6 +1,6 @@
 'use client'
 
-import { meta } from '@/lib/metadata'
+import { meta } from '@/app/metadata'
 import Anchor from './Anchor'
 import ChangeTheme from './client/ChangeTheme'
 

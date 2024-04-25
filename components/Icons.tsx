@@ -1,7 +1,7 @@
 import { FaGithub, FaMastodon } from 'react-icons/fa'
 import { FaDocker, FaNodeJs, FaReact, FaRust } from 'react-icons/fa6'
 import { SiNextdotjs, SiNixos, SiTypescript } from 'react-icons/si'
-import { meta } from '@/lib/metadata'
+import { meta } from '@/app/metadata'
 import Anchor from './Anchor'
 
 export function GitHub (): React.ReactElement {

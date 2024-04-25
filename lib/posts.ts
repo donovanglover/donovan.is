@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import matter from 'gray-matter'
-import { meta } from './metadata'
+import { meta } from '@/app/metadata'
 
 export interface Post {
   title: string

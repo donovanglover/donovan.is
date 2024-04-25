@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { meta } from '@/lib/metadata'
+import { meta } from '@/app/metadata'
 
 const schemes = [
   'base16-3024',

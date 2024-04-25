@@ -1,5 +1,5 @@
+import { meta } from '@/app/metadata'
 import NavLink from '@/components/client/NavLink'
-import { meta } from '@/lib/metadata'
 
 export default function Navbar (): React.ReactElement {
   return (

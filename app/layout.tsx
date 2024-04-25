@@ -2,10 +2,10 @@ import '@/app/globals.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
 import localFont from 'next/font/local'
+import { meta } from '@/app/metadata'
 import BackToTop from '@/components/client/BackToTop'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import { meta } from '@/lib/metadata'
 
 export const metadata = {
   title: {
