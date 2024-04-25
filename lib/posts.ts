@@ -16,7 +16,11 @@ export interface Frontmatter {
   date: string
 }
 
-async function getMarkdownContentFromPath (path: string): Promise<Post[]> {
+interface Options {
+  requireDate: boolean
+}
+
+async function getMarkdownContentFromPath (path: string, options?: Options): Promise<Post[]> {
   const posts: Post[] = []
   const files = await fs.readdir(path)
 
@@ -25,8 +29,8 @@ async function getMarkdownContentFromPath (path: string): Promise<Post[]> {
     const frontmatter = matter(fileContent).data as Frontmatter
     const date = new Date(frontmatter.date)
 
-    if (isNaN(date.getTime())) {
-      console.error(`ERROR: ${file} is missing a date.`)
+    if (options?.requireDate === true && isNaN(date.getTime())) {
+      throw new Error(`${file} is missing a date.`)
     }
 
     posts.push({
@@ -42,7 +46,7 @@ async function getMarkdownContentFromPath (path: string): Promise<Post[]> {
 }
 
 export async function getPosts (): Promise<Post[]> {
-  return await getMarkdownContentFromPath('./app/(content)/(writing)')
+  return await getMarkdownContentFromPath('./app/(content)/(writing)', { requireDate: true })
 }
 
 export async function getProjects (): Promise<Post[]> {
