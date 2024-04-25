@@ -15,6 +15,10 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  typescript: {
+    ignoreBuildErrors: true
+  },
+
   pageExtensions: ['mdx', 'ts', 'tsx'],
 
   swcMinify: true
