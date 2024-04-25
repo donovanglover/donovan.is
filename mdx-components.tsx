@@ -30,8 +30,7 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
 
     img: ({ src, alt }) => {
       if (src === undefined || alt === undefined) {
-        console.error('ERROR: Image has missing src/alt')
-        return
+        throw new Error('Image has missing src/alt')
       }
 
       return (
