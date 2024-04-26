@@ -267,7 +267,7 @@ export default function ChangeTheme (): React.ReactElement {
   return (
     <div className="text-center">
       <label htmlFor="base16Scheme">Change Theme:</label>
-      <select name="base16Scheme" id="base16Scheme" value={currentScheme} onChange={changeScheme} className="mb-2 ml-2 border border-200 bg-100 p-2 text-700 shadow">
+      <select name="base16Scheme" id="base16Scheme" value={currentScheme} onChange={changeScheme} className="m-2 border border-200 bg-100 p-2 text-700 shadow">
         {schemes.map(scheme => {
           return <option key={scheme} value={scheme}>{makeTitle(scheme.replace('base16-', ''))}</option>
         })}
