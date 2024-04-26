@@ -16,6 +16,12 @@ weight: 1
 
 "There isn't enough time to do *everything you want to do*. So you must prioritize and figure out what is the most important to you." - [Dom](https://old.reddit.com/r/Twitch/comments/16tzqb9/anyone_stream_while_also_having_a_full_time_job/k2iaihf/)
 
-"I hear and I forget. I see and I remember. I do and I understand." - [Confucius](https://workplace.stackexchange.com/a/20167)
-
 "Nothing, mental or physical, is permanent, and having an attachment to either leads to suffering. Fully resigning to this fact brings me much inner peace." - [David Collantes](https://collantes.us/2018/01/21/about-the-impermanence-of-things/)
+
+"A goal is a dream with a deadline." - [Misaki Masa](https://github.com/sxyazi)
+
+"People respond well to positivity and just getting on with life, but judge negativity and bitterness quite harshly." - [Troy Hunt](https://www.troyhunt.com/divorce/)
+
+"Stop dwelling on it and move on. I can't say I always do that, but the more I've just put my head down, looked to the future and powered forward, the better things got." - [Troy Hunt](https://www.troyhunt.com/divorce/)
+
+"Languages are easy enough to learn that there's no real merit to listing them all." - [eniraa](https://github.com/eniraa)

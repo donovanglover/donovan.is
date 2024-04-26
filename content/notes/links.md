@@ -58,6 +58,7 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 - [Michael Palmos](https://toqoz.fyi/)
 - [Josh Manders](https://joshmanders.com/)
 - [Gürkan](https://gurkan.in/posts/)
+- [Patrick Jackson](https://jackson.dev/post/)
 
 ## Indie Web
 
@@ -93,3 +94,8 @@ Some of these links may contain advertisements and other trackers. [uBlock Origi
 ## Computer Science
 
 - [USACO Guide](https://usaco.guide/)
+
+## Talks
+
+- [LXJS 2013 - Domenic Denicola - How to win friends and influence standards bodies](https://www.youtube.com/watch?v=hneN6aW-d9w)
+- [Tech Talk with Lindsay Wardell: The Importance of Side Projects and Networking](https://www.youtube.com/watch?v=W13X7wjKejs)
