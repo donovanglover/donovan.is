@@ -1,12 +1,12 @@
 .prose {
   /* Breakout images and code blocks wrapped in <figure> */
-  p:has(> img),
+  p:has(.photoswipe),
   figure:has(> pre) {
     margin: 0 calc(50% - 45vw);
   }
 
   @media screen and (min-width: 1280px) {
-    p:has(> img),
+    p:has(.photoswipe),
     figure:has(> pre) {
       margin: 0 calc(50% - 520px)
     }
@@ -17,11 +17,8 @@
     text-align: center;
   }
 
-  img + em {
-    display: block;
-    margin-top: -1.5rem;
-    font-style: normal;
-    font-size: 90%;
+  .photoswipe + em {
+    @apply block text-sm mt-4 text-center;
   }
 
   /* Underline links without covering the letters */
