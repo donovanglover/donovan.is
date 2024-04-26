@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import { FaRegStar } from 'react-icons/fa'
-import { SiNixos, SiReact, SiRust, SiTypescript } from 'react-icons/si'
+import { SiNixos, SiRust, SiTypescript } from 'react-icons/si'
 import Card from '@/components/Card'
 import Prose from '@/components/Prose'
 
@@ -86,7 +86,7 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
                     ? <SiNixos className="inline-block" />
                     : project.language === 'Rust'
                       ? <SiRust className="inline-block" />
-                      : <span><SiTypescript className="inline-block" /> <SiReact className="inline-block" /></span>}
+                      : <SiTypescript className="inline-block" />}
                 </h2>
                 <p className="grow pb-2 pt-1">{project.description}</p>
                 <p className="flex justify-between pt-2">
