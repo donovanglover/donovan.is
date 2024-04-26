@@ -1,13 +1,19 @@
 .prose {
+  h1 {
+    @apply text-center pb-12;
+  }
+
   /* Breakout images and code blocks wrapped in <figure> */
   p:has(.photoswipe),
-  figure:has(> pre) {
+  figure:has(> pre),
+  h1 {
     margin: 0 calc(50% - 45vw);
   }
 
   @media screen and (min-width: 1280px) {
     p:has(.photoswipe),
-    figure:has(> pre) {
+    figure:has(> pre),
+    h1 {
       margin: 0 calc(50% - 520px)
     }
   }
