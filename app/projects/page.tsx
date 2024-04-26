@@ -25,7 +25,6 @@ const whitelist = [
   'hyprdim',
   'hyprnome',
   'sakaya',
-  'jd',
   'thud',
   'base16-tailwind'
 ]
@@ -62,8 +61,6 @@ async function getGitHub (): Promise<Project[]> {
   }
 
   projects.sort((a, b) => b.stars - a.stars)
-
-  console.log(projects)
 
   return projects
 }
