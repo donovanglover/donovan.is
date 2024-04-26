@@ -72,14 +72,14 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
 
   return (
     <main className="font-serif">
-      <h2 className="pb-4 text-center font-sans text-4xl font-extrabold">Projects</h2>
+      <h1 className="pb-4 text-center font-sans text-4xl font-extrabold">Projects</h1>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {projects.map(project => {
           return (
             <Card key={project.name} href={`/${project.name}`}>
               <div className="px-4 py-6">
-                <h3 className="text-2xl font-bold">
+                <h2 className="text-2xl font-bold">
                   {project.name}
                   {' '}
                   {project.language === 'Nix'
@@ -87,7 +87,7 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
                     : project.language === 'Rust'
                       ? <SiRust className="inline-block" />
                       : <span><SiTypescript className="inline-block" /> <SiReact className="inline-block" /></span>}
-                </h3>
+                </h2>
                 <p className="grow pb-2 pt-1">{project.description}</p>
                 <p className="flex justify-between pt-2">
                   <span>{project.pushed === project.created
