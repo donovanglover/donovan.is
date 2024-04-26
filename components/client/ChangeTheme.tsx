@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { meta } from '@/app/metadata'
 
 const schemes = [
@@ -250,8 +250,19 @@ export default function ChangeTheme (): React.ReactElement {
 
   function changeScheme (event: React.ChangeEvent<HTMLSelectElement>): void {
     document.documentElement.classList.replace(currentScheme, event.target.value)
+    localStorage.setItem('theme', event.target.value)
     setCurrentScheme(event.target.value)
   }
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme')
+
+    if (storedTheme !== null) {
+      document.documentElement.classList.replace(currentScheme, storedTheme)
+      localStorage.setItem('theme', storedTheme)
+      setCurrentScheme(storedTheme)
+    }
+  }, [currentScheme, setCurrentScheme])
 
   return (
     <div className="text-center">
