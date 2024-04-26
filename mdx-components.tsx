@@ -1,6 +1,16 @@
 import type { MDXComponents } from 'mdx/types'
 import Image from 'next/image'
 import Link from 'next/link'
+import { type DetailedHTMLProps, type ImgHTMLAttributes } from 'react'
+
+interface NextSrc {
+  src: string
+  height: number
+  width: number
+  blurDataURL: string
+  blurWidth: number
+  blurHeight: number
+}
 
 export function useMDXComponents (components: MDXComponents): MDXComponents {
   return {
@@ -28,19 +38,23 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       return <a href={href}>{children}</a>
     },
 
-    img: ({ src, alt }) => {
+    img: ({ src, alt }: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
+      const img = (src as unknown) as NextSrc
+
       if (src === undefined || alt === undefined) {
         throw new Error('Image has missing src/alt')
       }
 
       return (
-        <Image
-          src={src}
-          alt={alt}
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          className="bg-200"
-        />
+        <a href={img.src} target="_blank" data-pswp-src={img.src} title={alt} data-pswp-width={img.width} data-pswp-height={img.height} className="photoswipe">
+          <Image
+            src={src}
+            alt={alt}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            className="bg-200"
+          />
+        </a>
       )
     },
 
