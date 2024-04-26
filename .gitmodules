@@ -1,4 +1,0 @@
-[submodule "themes/tabi"]
-	path = themes/tabi
-	url = https://github.com/donovanglover/tabi.git
-	branch = turbo
