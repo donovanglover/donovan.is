@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import { FaRegStar } from 'react-icons/fa'
 import { SiNixos, SiReact, SiRust, SiTypescript } from 'react-icons/si'
 import Card from '@/components/Card'
+import Prose from '@/components/Prose'
 
 export const runtime = 'edge'
 
@@ -72,7 +73,9 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
 
   return (
     <main className="font-serif">
-      <h1 className="pb-4 text-center font-sans text-4xl font-extrabold">Projects</h1>
+      <Prose>
+        <h1>Projects</h1>
+      </Prose>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {projects.map(project => {
