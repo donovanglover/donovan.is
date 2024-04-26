@@ -39,4 +39,16 @@
   h2:hover a, h3:hover a {
     @apply opacity-100;
   }
+
+  /* Make image hover cooler */
+  img {
+    font-size: 0;
+    box-shadow: 0 0 0.5rem rgb(var(--color-200));
+    transition: 0.2s filter ease-out, 0.2s box-shadow ease-out;
+
+    &:hover {
+      box-shadow: 0 0 1rem rgb(var(--color-200));
+      filter: brightness(107.5%);
+    }
+  }
 }
