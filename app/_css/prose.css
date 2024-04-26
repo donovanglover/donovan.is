@@ -1,6 +1,6 @@
 .prose {
   h1 {
-    @apply text-center pb-12;
+    @apply text-center pb-12 leading-[3.75rem];
   }
 
   /* Breakout images and code blocks wrapped in <figure> */
