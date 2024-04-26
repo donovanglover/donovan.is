@@ -36,7 +36,7 @@
     @apply size-5 cursor-pointer self-center bg-700;
   }
 
-  h2:hover a, h3:hover a {
+  h2:hover a, h3:hover a, h2 a:focus, h3 a:focus {
     @apply opacity-100;
   }
 
