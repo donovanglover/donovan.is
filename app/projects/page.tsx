@@ -90,11 +90,9 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
                 </h2>
                 <p className="grow pb-2 pt-1">{project.description}</p>
                 <p className="flex justify-between pt-2">
-                  <span>{project.pushed === project.created
-                    ? project.created
-                    : project.pushed === 2024
-                      ? `${project.created}\u2014Now`
-                      : `${project.created}\u2014${project.pushed}`}</span>
+                  <span>{project.pushed === 2024
+                    ? `${project.created}\u2014Now`
+                    : `${project.created}\u2014${project.pushed}`}</span>
                   {project.stars >= 5 && <span className="flex items-center"><FaRegStar className="mr-1 inline-block" />{project.stars}</span>}
                 </p>
               </div>
