@@ -7,7 +7,7 @@ export const runtime = 'edge'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Work I\'ve done.'
+  description: "I like writing software. Here's some of the original projects I've made."
 }
 
 interface Project {
