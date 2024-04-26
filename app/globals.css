@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource-variable/noto-sans-jp';
+@import '@fontsource-variable/aleo';
+
+@import './_css/fade-animation.css';
+@import './_css/text-selection.css';
+@import './_css/syntax-highlighting.css';
+@import './_css/prose.css';
+@import './_css/scrollbar.css';
+@import './_css/photoswipe.css';
