@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Prose from '@/components/Prose'
 import { getPosts, getProjects } from '@/lib/posts'
 
 export default async function HomePage (): Promise<React.ReactElement> {
@@ -6,26 +7,33 @@ export default async function HomePage (): Promise<React.ReactElement> {
   const projects = await getProjects()
 
   return (
-    <main className="container prose mx-auto">
-      <h2 className="font-serif text-3xl">Writing</h2>
-      {posts.map(post => {
-        return (
-          <p key={post.slug}>
-            <span className="flex justify-between">
-              <Link href={`/${post.slug}`}>{post.title}</Link>
-              <span>{post.date.toISOString().slice(0, 10)}</span>
-            </span>
-          </p>
-        )
-      })}
-      <h2 className="font-serif text-3xl">Projects</h2>
-      {projects.map(project => {
-        return (
-          <span key={project.slug} className="mr-3">
-            <Link href={`/${project.slug}`}>{project.title}</Link>
-          </span>
-        )
-      })}
+    <main>
+      <Prose>
+        <h2 className="text-3xl">Writing</h2>
+        <ul>
+          {posts.map(post => {
+            return (
+              <li key={post.slug}>
+                <span className="flex justify-between">
+                  <Link href={`/${post.slug}`}>{post.title}</Link>
+                  <span>{post.date.toISOString().slice(0, 10)}</span>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+
+        <h2 className="text-3xl">Projects</h2>
+        <ul>
+          {projects.map(project => {
+            return (
+              <li key={project.slug}>
+                <Link href={`/${project.slug}`}>{project.title}</Link> - {project.description}
+              </li>
+            )
+          })}
+        </ul>
+      </Prose>
     </main>
   )
 }
