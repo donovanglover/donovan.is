@@ -19,6 +19,21 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
 
+  async redirects() {
+    return [
+      {
+        source: '/blog/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
+      {
+        source: '/projects/:slug',
+        destination: '/:slug',
+        permanent: true,
+      }
+    ]
+  },
+
   pageExtensions: ['mdx', 'ts', 'tsx'],
 
   swcMinify: true
