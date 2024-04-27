@@ -14,9 +14,9 @@ export default async function HomePage (): Promise<React.ReactElement> {
           {posts.map(post => {
             return (
               <li key={post.slug}>
-                <span className="flex justify-between">
+                <span className="justify-between sm:flex">
                   <Link href={`/${post.slug}`}>{post.title}</Link>
-                  <span>{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                  <span className="block sm:pl-4">{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </span>
               </li>
             )
