@@ -13,7 +13,7 @@ export interface Post {
 export interface Frontmatter {
   title: string
   description: string
-  date: string
+  date: Date
 }
 
 interface Options {
@@ -27,9 +27,8 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
   for (const file of files) {
     const fileContent = await fs.readFile(`${path}/${file}/page.mdx`, 'utf-8')
     const frontmatter = matter(fileContent).data as Frontmatter
-    const date = new Date(frontmatter.date)
 
-    if (options?.requireDate === true && isNaN(date.getTime())) {
+    if (options?.requireDate === true && isNaN(frontmatter.date.getTime())) {
       throw new Error(`${file} is missing a date.`)
     }
 
@@ -38,7 +37,7 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
       description: frontmatter.description,
       url: `${meta.url}/${file}`,
       slug: file,
-      date
+      date: frontmatter.date
     })
   }
 
