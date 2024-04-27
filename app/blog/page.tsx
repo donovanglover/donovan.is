@@ -22,7 +22,7 @@ export default async function BlogPage (): Promise<React.ReactElement> {
             <article key={post.slug}>
               <span className="justify-between sm:flex">
                 <Link href={`/${post.slug}`}>{post.title}</Link>
-                <span className="block sm:pl-4">{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span className="block sm:pl-4">{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</span>
               </span>
             </article>
           )
