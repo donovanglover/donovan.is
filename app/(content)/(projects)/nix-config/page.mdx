@@ -40,8 +40,10 @@ In other words, if you remove a declarative option configured in Nix, that aspec
 
 If you haven't already, [download NixOS](https://nixos.org/download#download-nixos). You can use my system configuration in a [virtual machine](https://wiki.gentoo.org/wiki/Virtualization) by running the following command in an existing NixOS install:
 
+<figure>
 ```bash
 nixos-rebuild build-vm --flake github:donovanglover/nix-config#nixos && ./result/bin/run-nixos-vm
 ```
+</figure>
 
 The code base is designed to be easy to add and remove stuff, so you're free to use it as a starting point for your own system. Have fun!
