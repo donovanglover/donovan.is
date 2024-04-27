@@ -16,7 +16,7 @@ export default async function HomePage (): Promise<React.ReactElement> {
               <li key={post.slug}>
                 <span className="flex justify-between">
                   <Link href={`/${post.slug}`}>{post.title}</Link>
-                  <span>{post.date.toISOString().slice(0, 10)}</span>
+                  <span>{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </span>
               </li>
             )
