@@ -20,7 +20,7 @@
 
   /* Center-align figcaption-like markdown */
   p:has(> img + em) {
-    text-align: center;
+    @apply text-center;
   }
 
   .photoswipe + em {

@@ -51,8 +51,7 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
             src={src}
             alt={alt}
             sizes="100vw"
-            style={{ width: '100%', height: 'auto' }}
-            className="bg-200"
+            className="h-auto w-full bg-200"
           />
         </a>
       )

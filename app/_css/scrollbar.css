@@ -1,5 +1,4 @@
 html {
-  overflow-y: scroll;
+  @apply overflow-y-scroll scroll-smooth;
   scrollbar-color: rgb(var(--color-300)) rgb(var(--color-100));
-  scroll-behavior: smooth;
 }

@@ -1,7 +1,7 @@
 ::selection {
-  background: rgb(var(--color-red) / 0.25);
+  @apply bg-red/25;
 }
 
 pre ::selection {
-  background: rgb(var(--color-red) / 0.25);
+  @apply bg-red/25;
 }
