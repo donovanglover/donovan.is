@@ -54,7 +54,7 @@ const withMDX = createMDX({
       [rehypeToc, {
         headings: ['h2', 'h3'],
         customizeTOC: (toc) => {
-          if (toc.children[0].children.length > 0) {
+          if (toc.children[0].children.length > 5) {
             return toc;
           }
 
