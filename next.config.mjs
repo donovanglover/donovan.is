@@ -1,7 +1,7 @@
 import createMDX from '@next/mdx'
-import remarkToc from 'remark-toc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
+import rehypeToc from '@jsdevtools/rehype-toc'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeMdxImportMedia from 'rehype-mdx-import-media'
 import remarkFrontmatter from 'remark-frontmatter'
@@ -43,7 +43,6 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [
       remarkGfm,
-      remarkToc,
       remarkFrontmatter,
       [remarkMdxFrontmatter, { name: 'metadata' }]
     ],
@@ -52,6 +51,9 @@ const withMDX = createMDX({
       rehypeSlug,
       rehypeMdxImportMedia,
       rehypeAutolinkHeadings,
+      [rehypeToc, {
+        headings: ['h2', 'h3']
+      }],
       [rehypeShikiFromHighlighter,
         await getHighlighter({
           langs: Object.keys(bundledLanguages),

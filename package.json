@@ -16,6 +16,7 @@
     "@donovanglover/base16-tailwind": "npm:@jsr/donovanglover__base16-tailwind@^0.1.6",
     "@fontsource-variable/aleo": "^5.0.5",
     "@fontsource-variable/noto-sans-jp": "^5.0.19",
+    "@jsdevtools/rehype-toc": "^3.0.2",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.3",
@@ -35,7 +36,6 @@
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "remark-mdx-frontmatter": "^4.0.0",
-    "remark-toc": "^9.0.0",
     "sharp": "^0.33.3",
     "tippy.js": "^6.3.7"
   },

@@ -62,3 +62,15 @@
     @apply text-center text-3xl -mt-4 pb-8 font-light;
   }
 }
+
+.toc {
+  @apply fixed left-0 w-64 pr-2 overflow-y-scroll max-h-[80vh];
+
+  > .toc-level {
+    @apply list-none p-0 m-0;
+
+    .toc-level {
+      @apply list-disc;
+    }
+  }
+}
