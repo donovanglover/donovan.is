@@ -1,7 +1,6 @@
 'use client'
 
 import 'photoswipe/dist/photoswipe.css'
-import clsx from 'clsx'
 import Link from 'next/link'
 import PhotoSwipe from 'photoswipe'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
@@ -41,7 +40,9 @@ function photoswipe (): void {
 export default function Prose ({ children, sidebar = false }: ProseProps): React.ReactElement {
   const [links, setLinks] = useState([] as HTMLAnchorElement[])
 
-  function graph (): void {
+  useEffect(() => {
+    photoswipe()
+
     const links: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('article a')
     const internal: HTMLAnchorElement[] = []
     const origin = new URL(document.baseURI).origin
@@ -53,18 +54,13 @@ export default function Prose ({ children, sidebar = false }: ProseProps): React
     })
 
     setLinks(internal)
-  }
-
-  useEffect(() => {
-    photoswipe()
-    graph()
   }, [])
 
   return (
     <article className="prose prose-lg mx-auto py-4 font-serif xl:prose-xl prose-headings:font-sans prose-headings:transition-colors prose-p:transition-colors prose-a:transition-colors hover:prose-a:text-orange prose-strong:transition-colors">
       {children}
-      {sidebar &&
-        <div className={clsx('right-0 top-[9.5rem] hidden max-h-[60vh] w-80 overflow-y-scroll border border-200 px-4 opacity-60 shadow transition-opacity duration-500 hover:opacity-100 2xl:block', links.length > 0 ? 'absolute' : 'hidden')}>
+      {sidebar && links.length > 0 &&
+        <div className='absolute right-0 top-[9.5rem] hidden max-h-[60vh] w-80 overflow-y-scroll border border-200 px-4 opacity-60 shadow transition-opacity duration-500 hover:opacity-100 2xl:block'>
           <ul className='!m-0 list-none !p-0'>
             {links.map((link, i) => {
               return (
