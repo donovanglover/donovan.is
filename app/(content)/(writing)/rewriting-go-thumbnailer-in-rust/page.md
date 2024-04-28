@@ -431,6 +431,7 @@ Whew, we took an existing Go program and rewrote it in Rust! Now all that's left
 Here's the final `main.rs`:
 
 <figure>
+
 ```rust
 use clap::Parser;
 use cli::Cli;
@@ -484,6 +485,7 @@ fn main() {
     }
 }
 ```
+
 </figure>
 
 ## Future Work
