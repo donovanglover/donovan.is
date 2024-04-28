@@ -50,6 +50,7 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 3, smoo
 
       if ($dom.current !== null && top > 0) {
         $dom.current.classList.toggle('opacity-0', scrollTop <= top)
+        $dom.current.classList.toggle('cursor-pointer', scrollTop > top)
       }
     }
 
@@ -66,7 +67,7 @@ export default function BackToTop ({ top = 120, size = 64, strokeWidth = 3, smoo
   }
 
   return (
-    <div className="visible fixed bottom-6 right-6 cursor-pointer select-none opacity-0 transition-all duration-300" ref={$dom} onClick={handleClick}>
+    <div className="fixed bottom-6 right-6 select-none opacity-0 transition-all duration-300" ref={$dom} onClick={handleClick}>
       <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} focusable="false" className="block rotate-90 fill-200">
         <circle className="stroke-300" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} />
         <circle className="stroke-red" strokeWidth={strokeWidth} r={radius} cx={center} cy={center} strokeDasharray={dasharray} strokeDashoffset={progress ?? 0} />
