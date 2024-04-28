@@ -9,14 +9,14 @@
 
   /* Breakout images and code blocks wrapped in <figure> */
   p:has(.photoswipe),
-  figure:has(> pre),
+  pre,
   h1 {
     margin: 0 calc(50% - 45vw);
   }
 
   @media screen and (min-width: 1280px) {
     p:has(.photoswipe),
-    figure:has(> pre),
+    pre,
     h1 {
       margin: 0 calc(50% - 520px)
     }
