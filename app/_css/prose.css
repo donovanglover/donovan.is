@@ -64,6 +64,10 @@
 }
 
 .toc {
+  @apply hidden;
+}
+
+.prose:has(.date) .toc {
   @apply hidden 2xl:block absolute left-0 w-64 pr-2 top-48 overflow-y-scroll max-h-[50vh];
 
   > .toc-level {
