@@ -52,7 +52,14 @@ const withMDX = createMDX({
       rehypeMdxImportMedia,
       rehypeAutolinkHeadings,
       [rehypeToc, {
-        headings: ['h2', 'h3']
+        headings: ['h2', 'h3'],
+        customizeTOC: (toc) => {
+          if (toc.children[0].children.length > 0) {
+            return toc;
+          }
+
+          return false;
+        }
       }],
       [rehypeShikiFromHighlighter,
         await getHighlighter({
