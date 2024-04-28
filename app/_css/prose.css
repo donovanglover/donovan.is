@@ -23,7 +23,7 @@
   }
 
   pre {
-    @apply border-200;
+    @apply border-200 shadow;
   }
 
   /* Center-align figcaption-like markdown */
