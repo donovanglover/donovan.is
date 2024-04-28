@@ -32,6 +32,11 @@
     text-underline-position: under;
   }
 
+  /* Remove tabbing to invisible anchor for accessibility */
+  h1 a {
+    @apply hidden;
+  }
+
   /* Add anchor links to the left of headings */
   h2 a, h3 a {
     @apply transition-opacity inline-flex absolute justify-center items-center opacity-0 -ml-10 w-9 h-12 select-none;
