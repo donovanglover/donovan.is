@@ -7,7 +7,7 @@ export interface ContentLayoutProps {
 export default function ContentLayout ({ children }: ContentLayoutProps): React.ReactElement {
   return (
     <main>
-      <Prose>
+      <Prose sidebar={true}>
         {children}
       </Prose>
     </main>

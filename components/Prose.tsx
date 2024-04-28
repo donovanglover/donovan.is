@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 
 export interface ProseProps {
   children: React.ReactNode
+  sidebar?: boolean
 }
 
 function photoswipe (): void {
@@ -37,7 +38,7 @@ function photoswipe (): void {
   }
 }
 
-export default function Prose ({ children }: ProseProps): React.ReactElement {
+export default function Prose ({ children, sidebar = false }: ProseProps): React.ReactElement {
   const [links, setLinks] = useState([] as HTMLAnchorElement[])
 
   function graph (): void {
@@ -62,15 +63,17 @@ export default function Prose ({ children }: ProseProps): React.ReactElement {
   return (
     <article className="prose prose-lg mx-auto py-4 font-serif xl:prose-xl prose-headings:font-sans prose-headings:transition-colors prose-p:transition-colors prose-a:transition-colors hover:prose-a:text-orange prose-strong:transition-colors">
       {children}
-      <div className={clsx('right-0 top-[9.5rem] hidden max-h-[60vh] w-80 overflow-y-scroll border border-200 px-4 opacity-60 shadow transition-opacity duration-500 hover:opacity-100 2xl:block', links.length > 0 ? 'absolute' : 'hidden')}>
-        <ul className='!m-0 list-none !p-0'>
-          {links.map((link, i) => {
-            return (
-              <li key={`${i}-${link.text}-${link.href}`}><Link href={link.href} className="no-underline">{link.pathname}</Link></li>
-            )
-          })}
-        </ul>
-      </div>
+      {sidebar &&
+        <div className={clsx('right-0 top-[9.5rem] hidden max-h-[60vh] w-80 overflow-y-scroll border border-200 px-4 opacity-60 shadow transition-opacity duration-500 hover:opacity-100 2xl:block', links.length > 0 ? 'absolute' : 'hidden')}>
+          <ul className='!m-0 list-none !p-0'>
+            {links.map((link, i) => {
+              return (
+                <li key={`${i}-${link.text}-${link.href}`}><Link href={link.href} className="no-underline">{link.pathname}</Link></li>
+              )
+            })}
+          </ul>
+        </div>
+      }
     </article>
   )
 }
