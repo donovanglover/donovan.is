@@ -34,12 +34,14 @@ const nextConfig = {
     ]
   },
 
-  pageExtensions: ['mdx', 'ts', 'tsx'],
+  pageExtensions: ['md', 'ts', 'tsx'],
 
   swcMinify: true
 }
 
 const withMDX = createMDX({
+  extension: /\.md$/,
+
   options: {
     remarkPlugins: [
       remarkGfm,

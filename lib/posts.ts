@@ -25,7 +25,7 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
   const files = await fs.readdir(path)
 
   for (const file of files) {
-    const fileContent = await fs.readFile(`${path}/${file}/page.mdx`, 'utf-8')
+    const fileContent = await fs.readFile(`${path}/${file}/page.md`, 'utf-8')
     const frontmatter = matter(fileContent).data as Frontmatter
 
     if (options?.requireDate === true && isNaN(frontmatter.date.getTime())) {
