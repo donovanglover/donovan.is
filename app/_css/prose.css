@@ -22,6 +22,10 @@
     }
   }
 
+  pre {
+    @apply border-200;
+  }
+
   /* Center-align figcaption-like markdown */
   p:has(> img + em) {
     @apply text-center;
