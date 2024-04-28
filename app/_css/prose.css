@@ -67,8 +67,8 @@
     }
   }
 
-  .date {
-    @apply text-center text-3xl -mt-4 pb-8 font-light;
+  h1 + p > em {
+    @apply block text-center text-3xl -mt-4 pb-8 font-light not-italic;
   }
 }
 
@@ -88,6 +88,6 @@
   }
 }
 
-.prose:has(.date) .toc {
+.prose:has(h1 + p > em) .toc {
   @apply top-48;
 }

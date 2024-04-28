@@ -12,7 +12,7 @@ export default function NotFound (): React.ReactElement {
     <main>
       <Prose>
         <h1>404 Not Found</h1>
-        <p className="date">There&apos;s nothing here. Try going to the <Link href="/">home page</Link>.</p>
+        <p><em>There&apos;s nothing here. Try going to the <Link href="/">home page</Link>.</em></p>
       </Prose>
     </main>
   )

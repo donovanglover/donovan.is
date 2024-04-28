@@ -10,7 +10,7 @@ taxonomies: {
 
 # Rewriting go-thumbnailer in Rust
 
-<div className="date">September 10, 2023</div>
+*September 10, 2023*
 
 There are many advantages to using GTK and the ecosystem it entails. From configuration files to GUI controls, everything is simpler overall.
 
