@@ -1,4 +1,8 @@
 .prose {
+  h1, h2, h3, h4, h5, h6 {
+    @apply scroll-m-6;
+  }
+
   h1 {
     @apply text-center pb-12 leading-[3.75rem];
   }
