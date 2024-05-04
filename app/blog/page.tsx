@@ -19,7 +19,7 @@ export default async function BlogPage (): Promise<React.ReactElement> {
       <Prose>
         {posts.map(post => {
           return (
-            <article key={post.slug}>
+            <article key={post.slug} className="py-1.5">
               <span className="justify-between sm:flex">
                 <Link href={`/${post.slug}`}>{post.title}</Link>
                 <span className="block sm:pl-4">{post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</span>
