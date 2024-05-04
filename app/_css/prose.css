@@ -77,7 +77,7 @@
 }
 
 .toc {
-  @apply hidden 2xl:block absolute left-0 w-80 px-4 top-[9.5rem] overflow-y-scroll max-h-[60vh] border border-200 shadow opacity-60 hover:opacity-100 transition-opacity duration-500;
+  @apply hidden 2xl:block absolute left-0 w-80 px-4 top-[9.5rem] overflow-y-scroll max-h-[60vh] border border-200 shadow opacity-60 hover:opacity-100 transition-all duration-500;
 
   .toc-level-1 {
     @apply list-none p-0 m-0;
