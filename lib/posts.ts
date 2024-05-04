@@ -49,6 +49,10 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
     })
   }
 
+  if (options?.requireDate === true) {
+    posts.sort((a, b) => b.date.valueOf() - a.date.valueOf())
+  }
+
   return posts
 }
 
