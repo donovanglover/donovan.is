@@ -58,13 +58,27 @@ const mapleMono = localFont({
   variable: '--font-mono'
 })
 
+const javascript = String.raw
+
 export interface RootLayoutProps {
   children: React.ReactNode
 }
 
 export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
-    <html lang={meta.lang} className={clsx(meta.scheme.light, meta.scheme.dark)}>
+    <html lang={meta.lang} className={clsx(meta.scheme.light, meta.scheme.dark)} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: javascript`
+            const theme = localStorage.getItem("theme")
+
+            if (theme !== null) {
+              document.documentElement.className = theme
+            }
+          `
+        }}>
+        </script>
+      </head>
       <body className={clsx('flex h-screen flex-col text-pretty bg-100 text-700 transition-colors duration-500 ease-in-out', mapleMono.variable)}>
         <Navbar />
         <HolyLoader color='rgb(var(--color-red))' height={2} />
