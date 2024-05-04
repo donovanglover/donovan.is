@@ -41,12 +41,12 @@
   }
 
   /* Remove tabbing to invisible anchor for accessibility */
-  h1 a {
+  h1 a:first-child {
     @apply hidden;
   }
 
   /* Add anchor links to the left of headings */
-  h2 a, h3 a {
+  h2 a:first-child, h3 a:first-child {
     @apply transition-opacity inline-flex absolute justify-center items-center opacity-0 -ml-10 w-9 h-12 select-none;
   }
 
@@ -55,7 +55,7 @@
     @apply size-5 cursor-pointer self-center bg-700;
   }
 
-  h2:hover a, h3:hover a, h2 a:focus, h3 a:focus {
+  h2:hover a:first-child, h3:hover a:first-child, h2 a:first-child:focus, h3 a:first-child:focus {
     @apply opacity-100;
   }
 
