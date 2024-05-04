@@ -1,12 +1,19 @@
 import '@/app/globals.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import { meta } from '@/app/metadata'
 import BackToTop from '@/components/client/BackToTop'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#c82829' },
+    { media: '(prefers-color-scheme: dark)', color: '#ab4642' }
+  ]
+}
 
 export const metadata: Metadata = {
   title: {
