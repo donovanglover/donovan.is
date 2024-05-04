@@ -1,13 +1,14 @@
 import '@/app/globals.css'
 import clsx from 'clsx'
 import HolyLoader from 'holy-loader'
+import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { meta } from '@/app/metadata'
 import BackToTop from '@/components/client/BackToTop'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     template: `%s | ${meta.title}`,
     default: meta.title
