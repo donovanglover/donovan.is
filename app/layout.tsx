@@ -64,8 +64,8 @@ export interface RootLayoutProps {
 
 export default function RootLayout ({ children }: RootLayoutProps): React.ReactElement {
   return (
-    <html lang={meta.lang} className={clsx(mapleMono.variable, meta.scheme)}>
-      <body className="flex h-screen flex-col text-pretty bg-100 text-700 transition-colors duration-500 ease-in-out">
+    <html lang={meta.lang} className={clsx(meta.scheme.light, meta.scheme.dark)}>
+      <body className={clsx('flex h-screen flex-col text-pretty bg-100 text-700 transition-colors duration-500 ease-in-out', mapleMono.variable)}>
         <Navbar />
         <HolyLoader color='rgb(var(--color-red))' height={2} />
         <div className="container mx-auto grow px-4 py-8">

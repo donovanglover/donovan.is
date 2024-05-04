@@ -246,10 +246,10 @@ function makeTitle (slug: string): string {
 }
 
 export default function ChangeTheme (): React.ReactElement {
-  const [currentScheme, setCurrentScheme] = useState(meta.scheme)
+  const [currentScheme, setCurrentScheme] = useState(meta.scheme.light)
 
   function changeScheme (event: React.ChangeEvent<HTMLSelectElement>): void {
-    document.documentElement.classList.replace(currentScheme, event.target.value)
+    document.documentElement.className = event.target.value
     localStorage.setItem('theme', event.target.value)
     setCurrentScheme(event.target.value)
   }
@@ -258,9 +258,12 @@ export default function ChangeTheme (): React.ReactElement {
     const storedTheme = localStorage.getItem('theme')
 
     if (storedTheme !== null) {
-      document.documentElement.classList.replace(currentScheme, storedTheme)
-      localStorage.setItem('theme', storedTheme)
+      document.documentElement.className = storedTheme
       setCurrentScheme(storedTheme)
+    } else {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setCurrentScheme(meta.scheme.dark.replace('dark:', ''))
+      }
     }
   }, [currentScheme, setCurrentScheme])
 

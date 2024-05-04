@@ -17,7 +17,10 @@ export const meta: {
     linkedin: string
   }
   /** Default color scheme */
-  scheme: string
+  scheme: {
+    light: string
+    dark: string
+  }
 } = {
   title: 'Donovan Glover',
   description: 'Software Engineer in Atlanta, GA',
@@ -29,5 +32,8 @@ export const meta: {
     github: 'https://github.com/donovanglover',
     linkedin: 'https://linkedin.com/in/donovanglover'
   },
-  scheme: 'base16-default-dark'
+  scheme: {
+    light: 'base16-tomorrow',
+    dark: 'dark:base16-default-dark'
+  }
 }

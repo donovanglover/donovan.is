@@ -10,8 +10,6 @@ const tailwindConfig: Config = {
     './*.tsx'
   ],
 
-  darkMode: 'selector',
-
   theme: {
     fontFamily: {
       sans: "'Noto Sans JP Variable', 'Noto Sans CJK JP', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
