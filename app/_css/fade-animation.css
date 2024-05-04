@@ -21,3 +21,9 @@ main {
     transform: translateZ(0);
   }
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
+}
