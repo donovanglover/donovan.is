@@ -14,6 +14,7 @@ export interface Frontmatter {
   title: string
   description: string
   date: Date
+  draft?: boolean
 }
 
 interface Options {
@@ -38,6 +39,10 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
 
     if (options?.requireDate === true && isNaN(frontmatter.date.getTime())) {
       throw new Error(`${file} is missing a date.`)
+    }
+
+    if (frontmatter.draft === true) {
+      continue
     }
 
     posts.push({
