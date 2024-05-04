@@ -265,6 +265,12 @@ export default function ChangeTheme (): React.ReactElement {
         setCurrentScheme(meta.scheme.dark.replace('dark:', ''))
       }
     }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      if (localStorage.getItem('theme') === null) {
+        setCurrentScheme(event.matches ? meta.scheme.dark.replace('dark:', '') : meta.scheme.light)
+      }
+    })
   }, [currentScheme, setCurrentScheme])
 
   return (
