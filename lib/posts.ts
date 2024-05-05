@@ -37,7 +37,7 @@ async function getMarkdownContentFromPath (path: string, options?: Options): Pro
     const fileContent = await fs.readFile(fullPath, 'utf-8')
     const frontmatter = matter(fileContent).data as Frontmatter
 
-    if (options?.requireDate === true && isNaN(frontmatter.date.getTime())) {
+    if (options?.requireDate === true && isNaN(frontmatter.date?.getTime())) {
       throw new Error(`${file} is missing a date.`)
     }
 
