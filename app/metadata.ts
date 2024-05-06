@@ -33,7 +33,7 @@ export const meta: {
     linkedin: 'https://linkedin.com/in/donovanglover'
   },
   scheme: {
-    light: 'base16-tomorrow',
+    light: 'base16-standardized-light',
     dark: 'dark:base16-default-dark'
   }
 }
