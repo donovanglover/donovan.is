@@ -26,7 +26,8 @@ const whitelist = [
   'hyprnome',
   'sakaya',
   'thud',
-  'base16-tailwind'
+  'base16-tailwind',
+  'new-tab-identity'
 ]
 
 async function getGitHub (): Promise<Project[]> {
