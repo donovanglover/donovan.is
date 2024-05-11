@@ -74,15 +74,7 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
       </Prose>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
-        {projects.map(project => {
-          return (
-            <Card
-              key={project.name}
-              href={`/${project.name}`}
-              project={project}
-            />
-          )
-        })}
+        {projects.map(project => <Card key={project.name} project={project} />)}
       </div>
     </main>
   )

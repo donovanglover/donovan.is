@@ -1,12 +1,8 @@
-import clsx from 'clsx'
 import Link from 'next/link'
 import { FaRegStar } from 'react-icons/fa'
 import { SiNixos, SiRust, SiTypescript } from 'react-icons/si'
 
 export interface CardProps {
-  href: string
-  className?: string
-  children?: React.ReactNode
   project: {
     name: string
     description: string
@@ -17,9 +13,9 @@ export interface CardProps {
   }
 }
 
-export default function Card ({ href, className, project }: CardProps): React.ReactElement {
+export default function Card ({ project }: CardProps): React.ReactElement {
   return (
-    <Link href={href} className={clsx('m-2 flex flex-col justify-between border border-700/10 font-serif shadow hover:bg-200/80 hover:transition-colors md:m-4 xl:m-6', className)}>
+    <Link href={`/${project.name}`} className={'m-2 flex flex-col justify-between border border-700/10 font-serif shadow hover:bg-200/80 hover:transition-colors md:m-4 xl:m-6'}>
       <div className="px-4 py-6">
         <h2 className="text-2xl font-bold">
           {project.name}
