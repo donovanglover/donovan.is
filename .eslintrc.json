@@ -10,8 +10,7 @@
     "plugin:react/recommended",
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended",
-    "plugin:eslint-plugin-next-on-pages/recommended",
-    "plugin:storybook/recommended"
+    "plugin:eslint-plugin-next-on-pages/recommended"
   ],
 
   "parserOptions": {
