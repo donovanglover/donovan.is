@@ -34,5 +34,11 @@
       }
     ],
     "simple-import-sort/exports": "error"
+  },
+
+  "settings": {
+    "tailwindcss": {
+      "cssFiles": []
+    }
   }
 }
