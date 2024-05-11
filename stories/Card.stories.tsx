@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/test'
 import Card from '@/components/Card'
 
 const meta = {
@@ -23,12 +22,5 @@ export const SameYear: Story = {
       language: 'typescript',
       description: 'Browse the web from multiple locations at once with Mullvad VPN.'
     }
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const element = canvas.getByText('new-tab-identity')
-
-    await userEvent.click(element)
   }
 }

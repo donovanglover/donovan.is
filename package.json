@@ -47,7 +47,6 @@
     "@shikijs/rehype": "^1.3.0",
     "@storybook/addon-essentials": "^8.0.10",
     "@storybook/nextjs": "^8.0.10",
-    "@storybook/test": "^8.0.10",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "^15.0.7",
     "@types/mdx": "^2.0.13",
