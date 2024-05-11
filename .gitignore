@@ -3,3 +3,4 @@
 /.next/
 next-env.d.ts
 *storybook.log
+*.tsbuildinfo
