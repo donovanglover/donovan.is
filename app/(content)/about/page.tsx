@@ -3,7 +3,7 @@ import { GitHub, Mastodon, Nix, Rust, TypeScript } from '@/components/Icons'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about me.'
+  description: 'Learn more about Donovan, a software engineer that specializes in Linux, systems programming, and full stack web development.'
 }
 
 export default function AboutPage (): React.ReactElement {
