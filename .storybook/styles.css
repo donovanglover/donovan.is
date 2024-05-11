@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply base16-standardized-light;
+}
+
+body {
+  @apply bg-100 text-700;
+}
