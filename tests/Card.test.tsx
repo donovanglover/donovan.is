@@ -6,7 +6,6 @@ describe('Card', () => {
   beforeEach(() => {
     render(
       <Card
-        href='https://www.example.com'
         project={{
           name: 'new-tab-identity',
           stars: 0,
