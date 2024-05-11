@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "tsc && vitest run",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "pages:build": "npx @cloudflare/next-on-pages",
