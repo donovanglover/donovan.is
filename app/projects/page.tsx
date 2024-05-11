@@ -1,6 +1,4 @@
 import { type Metadata } from 'next'
-import { FaRegStar } from 'react-icons/fa'
-import { SiNixos, SiRust, SiTypescript } from 'react-icons/si'
 import Card from '@/components/Card'
 import Prose from '@/components/Prose'
 
@@ -78,26 +76,11 @@ export default async function ProjectsPage (): Promise<React.ReactElement> {
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {projects.map(project => {
           return (
-            <Card key={project.name} href={`/${project.name}`}>
-              <div className="px-4 py-6">
-                <h2 className="text-2xl font-bold">
-                  {project.name}
-                  {' '}
-                  {project.language === 'Nix'
-                    ? <SiNixos className="inline-block" />
-                    : project.language === 'Rust'
-                      ? <SiRust className="inline-block" />
-                      : <SiTypescript className="inline-block" />}
-                </h2>
-                <p className="grow pb-2 pt-1">{project.description}</p>
-                <p className="flex justify-between pt-2">
-                  <span>{project.pushed === 2024
-                    ? `${project.created}\u2014Now`
-                    : `${project.created}\u2014${project.pushed}`}</span>
-                  {project.stars >= 5 && <span className="flex items-center"><FaRegStar className="mr-1 inline-block" />{project.stars}</span>}
-                </p>
-              </div>
-            </Card>
+            <Card
+              key={project.name}
+              href={`/${project.name}`}
+              project={project}
+            />
           )
         })}
       </div>
