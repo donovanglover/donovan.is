@@ -15,10 +15,6 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  typescript: {
-    ignoreBuildErrors: true
-  },
-
   async redirects() {
     return [
       {
