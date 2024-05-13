@@ -28,10 +28,6 @@ Some of these links may contain advertisements or other trackers. [uBlock Origin
 - [Httpster](https://httpster.net/)
 - [Accessibility Webring Club](https://a11y-webring.club/)
 
-## Online Tools
-
-- [Google Webfonts Helper](https://gwfh.mranftl.com/fonts)
-
 ## Personal Websites
 
 - [Lily Foster](https://lily.flowers/)
