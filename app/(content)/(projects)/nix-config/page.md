@@ -6,7 +6,7 @@ tags: ["Linux", "Nix", "NixOS"]
 
 # nix-config
 
-I've spent a few years fine-tuning my ideal programming environment. Using modern technologies like [NixOS](https://nixos.org/) and [Nix Flakes](https://nixos.wiki/wiki/Flakes), I created a fully reproducible and open source [GNU/Linux](https://www.gnu.org/gnu/linux-and-gnu.en.html) system that anyone can build and expand upon.
+I've spent a few years fine-tuning my ideal programming environment. Using modern technologies like [NixOS](https://nixos.org/) and [Nix Flakes](https://wiki.nixos.org/wiki/Flakes), I created a fully reproducible and open source [GNU/Linux](https://www.gnu.org/gnu/linux-and-gnu.en.html) system that anyone can build and expand upon.
 
 The source code is available on [GitHub](https://github.com/donovanglover/nix-config).
 
