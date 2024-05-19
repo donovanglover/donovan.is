@@ -5,10 +5,6 @@ description: Websites I like and want to share with others.
 
 # Links
 
-Here are a few websites I like and want to share with others. Let me know if a website on this list has helped you!
-
-Some of these links may contain advertisements or other trackers. [uBlock Origin](https://github.com/gorhill/uBlock) can help with this. For more information, read [Privacy Guides](https://www.privacyguides.org).
-
 ## Studios
 
 - [Set Studio](https://set.studio/)
@@ -39,10 +35,16 @@ Some of these links may contain advertisements or other trackers. [uBlock Origin
 - [Amy Hupe](https://amyhupe.co.uk/)
 - [Amyspark](https://www.amyspark.me/)
 - [Jared White](https://jaredwhite.com/)
+- [Remilia Scarlet](https://remilia.sdf.org/)
+- [Andreas Longva](https://andreaslongva.com/)
+- [Una Kravets](https://una.im/)
+- [Alvar Lagerlöf](https://www.alvar.dev/)
+- [Josh Goldberg](https://www.joshuakgoldberg.com/)
 
 ## Art Websites
 
 - [Caroline Kunka](https://carolinekunka.com/)
+- [inkle](https://www.inklestudios.com/)
 
 ## Blogs
 
@@ -56,6 +58,8 @@ Some of these links may contain advertisements or other trackers. [uBlock Origin
 - [Josh Manders](https://joshmanders.com/)
 - [Gürkan](https://gurkan.in/posts/)
 - [Patrick Jackson](https://jackson.dev/post/)
+- [mediocregopher](https://mediocregopher.com/posts/)
+- [aorith's site](https://aorith.github.io/posts/)
 
 ## Indie Web
 
@@ -65,18 +69,31 @@ Some of these links may contain advertisements or other trackers. [uBlock Origin
 ## Fullstack
 
 - [Prisma](https://www.prisma.io/docs/getting-started)
-- [Nuxt](https://nuxt.com/)
 - [Next.js](https://nextjs.org/learn)
+
+## Headless CMS
+
+- [Decap CMS](https://decapcms.org/)
+- [Strapi](https://strapi.io/)
+- [WordPress](https://wordpress.org/)
 
 ## Rust
 
 - [Rust Cookbook](https://jamesgraves.github.io/rust-cookbook/intro.html)
+
+## Linux
+
+- [Purism](https://puri.sm/)
+- [System76](https://system76.com/)
+- [Framework](https://frame.work/)
+- [Pine64](https://pine64.com/)
 
 ## Nix
 
 - [Nixpkgs Manual](https://nixos.org/manual/nixpkgs/unstable/)
 - [Nix Reference Manual](https://nixos.org/manual/nix/stable/)
 - [The Purely Functional Software Deployment Model](https://edolstra.github.io/pubs/phd-thesis.pdf)
+- [Nixified AI](https://nixified.ai/)
 
 ## Docker
 
@@ -87,10 +104,15 @@ Some of these links may contain advertisements or other trackers. [uBlock Origin
 
 - [Mindustry](https://github.com/Anuken/Mindustry)
 - [Mullvad VPN](https://github.com/mullvad/mullvadvpn-app)
+- [Proton Web Clients](https://github.com/ProtonMail/WebClients)
 
 ## Computer Science
 
 - [USACO Guide](https://usaco.guide/)
+
+## Education
+
+- [Privacy Guides](https://www.privacyguides.org)
 
 ## Talks
 
