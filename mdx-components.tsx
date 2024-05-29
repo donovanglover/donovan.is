@@ -2,6 +2,8 @@ import type { MDXComponents } from 'mdx/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { type DetailedHTMLProps, type ImgHTMLAttributes } from 'react'
+import AnchorLink from './components/client/AnchorLink'
+import { openGraph } from './lib/opengraph'
 
 interface NextSrc {
   src: string
@@ -14,7 +16,7 @@ interface NextSrc {
 
 export function useMDXComponents (components: MDXComponents): MDXComponents {
   return {
-    a: ({ href, children }) => {
+    a: async ({ href, children }) => {
       if (typeof href !== 'string' || href === '') {
         throw new Error('A link in a markdown file is missing a url. Try rg -F "]()"')
       }
@@ -32,7 +34,7 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith('https://')) {
-        return <a target='_blank' rel="noopener noreferrer" href={href}>{children}</a>
+        return <AnchorLink href={href} og={await openGraph(href)}>{children}</AnchorLink>
       }
 
       return <a href={href}>{children}</a>
