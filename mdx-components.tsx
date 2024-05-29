@@ -26,7 +26,7 @@ export function useMDXComponents (components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith('/')) {
-        return <Link href={href}>{children}</Link>
+        return <AnchorLink href={href} og={await openGraph('https://donovan.is' + href)}>{children}</AnchorLink>
       }
 
       if (href.startsWith('http://')) {
