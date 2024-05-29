@@ -19,7 +19,7 @@ export interface AnchorLinkProps {
 
 export default function AnchorLink ({ href, og, children }: AnchorLinkProps): React.ReactElement {
   const tooltip = (
-    <>
+    <div className="max-w-[512px] lg:min-w-[512px]">
       {og.image !== undefined && <img className='max-h-64 w-full bg-100 object-cover' src={og.image} alt={og.title ?? href} title={og.title ?? href} />}
       <div className='p-4'>
         {og.title !== undefined && <h2 className='truncate pb-4 font-sans text-2xl font-bold' title={og.title}>{og.title}</h2>}
@@ -30,12 +30,12 @@ export default function AnchorLink ({ href, og, children }: AnchorLinkProps): Re
           <MdOutlineArrowOutward />
         </span>
       </div>
-    </>
+    </div>
   )
 
   if (href.startsWith('/')) {
     return (
-      <Tippy className='not-prose min-w-[512px] overflow-hidden rounded-xl bg-200 shadow-2xl' animation='shift-away' interactive={true} content={
+      <Tippy className='not-prose !max-w-[95vw] overflow-hidden rounded-xl bg-200 shadow-2xl' animation='shift-away' interactive={true} content={
         <Link data-tooltip href={href}>{tooltip}</Link>
       }>
         <Link href={href}>{children}</Link>
@@ -44,7 +44,7 @@ export default function AnchorLink ({ href, og, children }: AnchorLinkProps): Re
   }
 
   return (
-    <Tippy className='not-prose min-w-[512px] overflow-hidden rounded-xl bg-200 shadow-2xl' animation='shift-away' interactive={true} content={
+    <Tippy className='not-prose !max-w-[95vw] overflow-hidden rounded-xl bg-200 shadow-2xl' animation='shift-away' interactive={true} content={
       <a data-tooltip target='_blank' rel='noopener noreferrer' href={href}>{tooltip}</a>
     }>
       <a target='_blank' rel="noopener noreferrer" href={href}>{children}</a>
